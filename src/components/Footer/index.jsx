@@ -5,7 +5,7 @@ export default function Footer() {
         <div>
             <hr className={styles.hrFooterLine} />
             <div className={styles.Footer}>
-                <p className={styles.webName}>SMTOWN&STORE</p>
+                <p className={styles.webName}>SMTOWN&SHOP</p>
                 <div className={styles.IconArea}>
                     <a href="https://www.facebook.com/smtown">
                         <img className={styles.icon} src="/images/FB_icon.png" alt="facebook" />
@@ -20,7 +20,7 @@ export default function Footer() {
                         <img className={styles.icon} src="/images/YT_icon.png" alt="youtube" />
                     </a>
                 </div>
-                <p className={styles.copyRight}>© 2023 SMTOWN&STORE</p>
+                <p className={styles.copyRight}>© 2023 SMTOWN&SHOP</p>
             </div>
         </div>
     )

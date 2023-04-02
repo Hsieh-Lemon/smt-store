@@ -64,7 +64,7 @@ body {
   padding: 0;
   height: auto;
   line-height: 1.6;
-  background-color: #8397c5;
+  background-color: #ffffff;
 }
 
 .layoutFooter {
@@ -72,12 +72,12 @@ body {
   padding: 0;
   height: auto;
   line-height: 1.6;
-  background-color: #aed89b;
+  background-color: #ffffff;
 }
 
 .layoutContent {
   grid-area: content;
-  background-color: #d2a2e1;
+  background-color: #ffffff;
 }
 
 

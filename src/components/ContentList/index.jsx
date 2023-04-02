@@ -3,10 +3,10 @@ import News from "../News";
 import Video from "../Video";
 import Album from "../Album";
 
-
 export default function ContentList() {
     return (
         <div>
+            
             <News />
             <Video />
             <Album />

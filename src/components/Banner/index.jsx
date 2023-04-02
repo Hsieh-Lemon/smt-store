@@ -23,3 +23,4 @@ const Banner = () => (
   </Carousel>
 );
 export default Banner;
+
