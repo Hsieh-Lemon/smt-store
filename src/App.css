@@ -13,12 +13,14 @@
 }
 } 
 
+/*平板電腦*/
 @media (min-width: 768px) {
 .container {
   width: 720px;
 }
 } 
 
+/*電腦*/
 @media (min-width: 992px) {
 .container {
   width: 960px;

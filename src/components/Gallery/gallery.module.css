@@ -1,0 +1,14 @@
+.gallery{
+   margin-bottom:130px ;
+    padding: 0 10px 0 10px;
+}
+@media (min-width: 768px) {
+    .gallery {
+        padding: 0 130px 0 130px;
+    }
+  }
+
+.gallery img{
+    box-shadow: 4px 4px 4px #696D8A;
+    
+}

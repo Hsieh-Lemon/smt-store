@@ -15,15 +15,15 @@ export default function Header() {
                     isOnTouch={isOnTouch}
                 />
                 <Link to="/">
-                    <img className={styles.logo} src="/images/LOGO2.png" alt="logo" />
+                    <img className={styles.logo} src="/images/LOGO.svg" alt="logo" />
                 </Link>
                 <NavBar open={isOnTouch} onClose={() => setIsOnTouch(false)} />
                 <div className={styles.IconArea}>
                     <a href="#">
-                        <img className={styles.icon} src="/images/LOGIN.png" alt="login" />
+                        <img className={styles.icon} src="/images/LOGIN.svg" alt="login" />
                     </a>
                     <a href="#">
-                        <img className={styles.icon} src="/images/BAG.png" alt="bag" />
+                        <img className={styles.icon} src="/images/BAG.svg" alt="bag" />
                     </a>
                 </div>
 
