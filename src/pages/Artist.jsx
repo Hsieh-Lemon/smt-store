@@ -4,6 +4,7 @@ import ArtistTop from "../components/ArtistTop";
 import { Helmet } from "react-helmet-async"
 import Gallery from "../components/Gallery";
 import artist from "../json/artist.json"
+import Search from "../components/Search";
 
 function Artist(){
     
@@ -14,6 +15,7 @@ function Artist(){
             <Header className="layoutHeader" />
             <div className="layoutContent" >
                 <ArtistTop/>
+                <Search/>
                 <Gallery artist={artist}/>
             </div>
             <Footer className="layoutFooter" />

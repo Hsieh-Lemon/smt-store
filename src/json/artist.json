@@ -25,13 +25,13 @@
 
     {
         "id":"5",
-        "image":"/images/ARTIST/artist_snsd.jpg.webp"
+        "image":"/images/ARTIST/artist_snsd.jpg"
         
     },
 
     {
         "id":"6",
-        "image":"/images/ARTIST/artist_shinee.jpg"
+        "image":"/images/ARTIST/artist_shinee2.jpg"
         
     },
 
@@ -49,7 +49,7 @@
 
     {
         "id":"9",
-        "image":"/images/ARTIST/artist_rv.jpeg"
+        "image":"/images/ARTIST/artist_rv2.jpg"
         
     },
 
