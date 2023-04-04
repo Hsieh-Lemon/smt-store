@@ -1,79 +1,91 @@
 [
     {   
         "id":"1",
-        "image":"/images/ARTIST/artist_kangta.jpg"
-        
+        "image":"/images/ARTIST/artist_kangta.jpg",
+        "category":"solo"
     },
 
     {
         "id":"2",
-        "image":"/images/ARTIST/artist_boa.jpeg"
+        "image":"/images/ARTIST/artist_boa.jpeg",
+        "category":"solo"
         
     },
 
     {
         "id":"3",
-        "image":"/images/ARTIST/artist_TVXQ.jpg"
+        "image":"/images/ARTIST/artist_TVXQ.jpg",
+        "category":"boys-team"
         
     },
 
     {
         "id":"4",
-        "image":"/images/ARTIST/artist_SJ.jpg"
+        "image":"/images/ARTIST/artist_SJ.jpg",
+        "category":"boys-team"
         
     },
 
     {
         "id":"5",
-        "image":"/images/ARTIST/artist_snsd.jpg"
+        "image":"/images/ARTIST/artist_snsd.jpg",
+        "category":"girls-team"
         
     },
 
     {
         "id":"6",
-        "image":"/images/ARTIST/artist_shinee2.jpg"
+        "image":"/images/ARTIST/artist_shinee2.jpg",
+        "category":"boys-team"
         
     },
 
     {
         "id":"7",
-        "image":"/images/ARTIST/artist_f(x).jpg"
+        "image":"/images/ARTIST/artist_f(x).jpg",
+        "category":"girls-team"
         
     },
 
     {
         "id":"8",
-        "image":"/images/ARTIST/artist_exo.jpeg"
+        "image":"/images/ARTIST/artist_exo.jpeg",
+        "category":"boys-team"
         
     },
 
     {
         "id":"9",
-        "image":"/images/ARTIST/artist_rv2.jpg"
+        "image":"/images/ARTIST/artist_rv2.jpg",
+        "category":"girls-team"
         
     },
 
     {
         "id":"10",
-        "image":"/images/ARTIST/artist_nct.jpg"
+        "image":"/images/ARTIST/artist_nct.jpg",
+        "category":"boys-team"
         
     },
 
     {
         "id":"11",
-        "image":"/images/ARTIST/artist_aespa.jpeg"
+        "image":"/images/ARTIST/artist_aespa.jpeg",
+        "category":"girls-team"
         
     },
 
     {
         "id":"12",
-        "image":"/images/ARTIST/artist_superm.jpeg"
+        "image":"/images/ARTIST/artist_superm.jpeg",
+        "category":"boys-team"
         
     },
 
     {
         "id":"13",
-        "image":"/images/ARTIST/artist_gotthebeat.jpeg"
+        "image":"/images/ARTIST/artist_gotthebeat.jpeg",
+        "category":"girls-team"
         
     }
 

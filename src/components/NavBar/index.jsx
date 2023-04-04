@@ -5,11 +5,11 @@ import styles from './navbar.module.css';
 export default function NavBar({ open, onClose }) {
     const NavBarContent = () => (
         <>
-            <NavLink to="/NavBar/artist"
+            <NavLink to="/artist"
                 className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
                 Artist
             </NavLink>
-            <NavLink to="/NavBar/about"
+            <NavLink to="/about"
                 className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
                 About
             </NavLink>

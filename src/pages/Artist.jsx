@@ -3,11 +3,19 @@ import Header from "../components/Header";
 import ArtistTop from "../components/ArtistTop";
 import { Helmet } from "react-helmet-async"
 import Gallery from "../components/Gallery";
-import artist from "../json/artist.json"
+import artists from "../json/artist.json"
 import Search from "../components/Search";
+import ArtistSelect from "../components/ArtistSelect";
+import { useParams } from 'react-router-dom';
+
 
 function Artist(){
-    
+    const { categoryName } = useParams();
+    const _artists = !categoryName
+    ? artists
+    : artists.filter(
+        x => x?.category.toUpperCase() === categoryName.toUpperCase()
+      );
 
     return(
         <div className="mainLayout">
@@ -16,7 +24,8 @@ function Artist(){
             <div className="layoutContent" >
                 <ArtistTop/>
                 <Search/>
-                <Gallery artist={artist}/>
+                <ArtistSelect/>
+                <Gallery artist={_artists}/>
             </div>
             <Footer className="layoutFooter" />
         </div>

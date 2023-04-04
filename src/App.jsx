@@ -15,11 +15,12 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="NavBar">
-              <Route path="artist" element={<Artist />} />
-              <Route path="about" element={<About />} />
-              <Route path="shop" element={<Home />} />
+            <Route path="artist" element={<Artist />} >
+              <Route path="category/:categoryName" element={<Artist />} />
             </Route>
+            <Route path="about" element={<About />} />
+            <Route path="shop" element={<Home />} />
+
           </Routes>
         </BrowserRouter>
       </HelmetProvider>
