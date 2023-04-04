@@ -6,7 +6,7 @@ import Album from "../Album";
 export default function ContentList() {
     return (
         <div>
-            
+            <Banner/>
             <News />
             <Video />
             <Album />

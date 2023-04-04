@@ -1,26 +1,26 @@
 import { Carousel } from 'antd';
-const contentStyle = {
-  height: '160px',
-  color: '#fff',
-  lineHeight: '160px',
-  textAlign: 'center',
-  background: '#364d79',
-};
+import styles from "./banner.module.css";
+
 const Banner = () => (
-  <Carousel autoplay>
-    <div>
-      <h3 style={contentStyle}>1</h3>
+    <div className={styles.banner}>
+        <Carousel autoplay>
+            <div>
+            <img className={styles.img} src="/images/banner_drama.png" />
+            </div>
+            <div>
+            <img className={styles.img} src="/images/banner_music.png" />
+            </div>
+            <div>
+            <img className={styles.img} src="/images/banner_md.png" />
+            </div>
+            <div>
+            <img className={styles.img} src="/images/banner_show.png" />
+            </div>
+            <div>
+            <img className={styles.img} src="/images/banner_concert.png" />
+            </div>
+        </Carousel>
     </div>
-    <div>
-      <h3 style={contentStyle}>2</h3>
-    </div>
-    <div>
-      <h3 style={contentStyle}>3</h3>
-    </div>
-    <div>
-      <h3 style={contentStyle}>4</h3>
-    </div>
-  </Carousel>
 );
 export default Banner;
 
