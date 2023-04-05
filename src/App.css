@@ -82,6 +82,19 @@ body {
   background-color: #ffffff;
 }
 
+.boss_img{
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+.boss_img h1{
+  position: relative;
+  right: 300px;
+  top: 150px;
+  color: #ffffff;
+}
+
 
 
 
