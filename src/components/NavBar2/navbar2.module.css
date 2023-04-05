@@ -1,0 +1,30 @@
+.navBar2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #434868;
+    margin-top: 4.2rem;
+   
+}
+.navItem {
+    font-size: 1.5rem;
+    margin:0;
+    margin-right: 5rem;
+    
+    cursor: pointer;
+    
+    opacity: 0.6;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .navItem:hover {
+  
+    opacity: 1;
+    text-shadow: 0px 0px 30px white;
+  }
+  
+  .navItemActive {
+    composes: navItem;
+    opacity: 1;
+  }
