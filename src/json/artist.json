@@ -1,12 +1,14 @@
 [
     {   
         "id":"1",
+        "name":"KANGTA",
         "image":"/images/ARTIST/artist_kangta.jpg",
         "category":"solo"
     },
 
     {
         "id":"2",
+        "name":"BOA",
         "image":"/images/ARTIST/artist_boa.jpeg",
         "category":"solo"
         
@@ -14,6 +16,7 @@
 
     {
         "id":"3",
+        "name":"TVXQ",
         "image":"/images/ARTIST/artist_TVXQ.jpg",
         "category":"boys-team"
         
@@ -21,6 +24,7 @@
 
     {
         "id":"4",
+        "name":"SUPER JUNIOR",
         "image":"/images/ARTIST/artist_SJ.jpg",
         "category":"boys-team"
         
@@ -28,6 +32,7 @@
 
     {
         "id":"5",
+        "name":"GIRLS GENERATION",
         "image":"/images/ARTIST/artist_snsd.jpg",
         "category":"girls-team"
         
@@ -35,6 +40,7 @@
 
     {
         "id":"6",
+        "name":"SHINEE",
         "image":"/images/ARTIST/artist_shinee2.jpg",
         "category":"boys-team"
         
@@ -42,6 +48,7 @@
 
     {
         "id":"7",
+        "name":"F(X)",
         "image":"/images/ARTIST/artist_f(x).jpg",
         "category":"girls-team"
         
@@ -49,6 +56,7 @@
 
     {
         "id":"8",
+        "name":"EXO",
         "image":"/images/ARTIST/artist_exo.jpeg",
         "category":"boys-team"
         
@@ -56,6 +64,7 @@
 
     {
         "id":"9",
+        "name":"RED VELVET",
         "image":"/images/ARTIST/artist_rv2.jpg",
         "category":"girls-team"
         
@@ -63,6 +72,7 @@
 
     {
         "id":"10",
+        "name":"NCT",
         "image":"/images/ARTIST/artist_nct.jpg",
         "category":"boys-team"
         
@@ -70,6 +80,7 @@
 
     {
         "id":"11",
+        "name":"aespa",
         "image":"/images/ARTIST/artist_aespa.jpeg",
         "category":"girls-team"
         
@@ -77,6 +88,7 @@
 
     {
         "id":"12",
+        "name":"SUPERM",
         "image":"/images/ARTIST/artist_superm.jpeg",
         "category":"boys-team"
         
@@ -84,6 +96,7 @@
 
     {
         "id":"13",
+        "name":"GOT THE BEAT",
         "image":"/images/ARTIST/artist_gotthebeat.jpeg",
         "category":"girls-team"
         

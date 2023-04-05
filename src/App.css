@@ -85,21 +85,21 @@ body {
 .boss_img{
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 50px;
 }
 
-.boss_img h1{
-  position: relative;
-  right: 300px;
-  top: 150px;
-  color: #ffffff;
+.boss_img img{
+  width: 380px;
+  height: 400px;
+  object-fit: cover;
+  object-position: left;
 }
 
-
-
-
-
-
+.boss_img h1{
+  color: #000000;
+  margin: 25px;
+}
 
 
 /*

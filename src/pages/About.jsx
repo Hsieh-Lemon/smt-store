@@ -9,7 +9,7 @@ function About() {
             <Header className="layoutHeader" />
             <div className="layoutContent" >
                 <div className="boss_img">
-                    <img src="images/sm_boss.jpg"/>
+                    <img src="images/sm_boss.jpg" />
                     <h1>Pay To Unlock</h1>
                 </div>
             </div>

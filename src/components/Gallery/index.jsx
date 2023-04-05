@@ -10,14 +10,21 @@ export default function Gallery({ artist }) {
             >
                 <Masonry gutter="10px">
                     {artist.map(artist => (
-                        <a href="#">
-                            <img
-                                key={artist.id}
-                                src={artist.image}
-                                style={{ width: "100%", display: "block" }}
-                                alt=""
-                            />
-                        </a>
+                        <div class={styles.grid}>
+                            <figure className={styles.effectSadie}>
+                                <img
+                                    key={artist.id}
+                                    src={artist.image}
+                                    style={{ width: "100%", display: "block" }}
+                                    alt=""
+                                />
+                                <figcaption>
+                                    <h2><span>{artist.name}</span></h2>
+                                    <p>Sadie never took her eyes off me.</p>
+                                    <a href="#">View more</a>
+                                </figcaption>
+                            </figure>
+                        </div>
                     ))}
                 </Masonry>
 
@@ -25,4 +32,3 @@ export default function Gallery({ artist }) {
         </div>
     )
 }
-

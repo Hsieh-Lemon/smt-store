@@ -8,7 +8,6 @@ import Search from "../components/Search";
 import ArtistSelect from "../components/ArtistSelect";
 import { useParams } from 'react-router-dom';
 
-
 function Artist(){
     const { categoryName } = useParams();
     const _artists = !categoryName
