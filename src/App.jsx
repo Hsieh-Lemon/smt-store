@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import { ConfigProvider } from 'antd';
 
-import  { lightTheme, darkTheme }  from './theme';
+import { lightTheme, darkTheme } from './theme';
 import Shop from './pages/Shop'
 import Product from './pages/Product';
 import './App.css'
@@ -17,6 +17,13 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Shop />} />
+          <Route path="products">
+                <Route path="category/:categoryName" element={<Shop />} />
+                <Route path="id/:productId" element={<Product />} />
+          </Route>
+          <Route path="products">
+            <Route path="id/:productId" element={<Product />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </ConfigProvider>

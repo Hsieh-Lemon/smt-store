@@ -1,0 +1,39 @@
+.info{
+    border: 6px solid #747BA8;
+    border-radius: 4.25rem;
+    width: 77.5rem;
+    height: 42.7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 71px;
+}
+.info img{
+    margin-right: 70px;
+}
+.author{
+    font-size: 1.875rem;
+}
+.name{
+    font-size: 2rem;
+    color: #434868;
+}
+
+.text{
+    font-size: 1.875rem;
+    margin: 3.125rem 0;
+}
+.sum{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.word{
+    font-size: 1.625rem;
+    margin:4.938rem 0;
+}
+.qty{
+    font-size: 2.25rem;
+    margin-bottom:4.938rem;
+    margin-top:4.75rem ;
+}

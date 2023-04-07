@@ -30,7 +30,6 @@ const Searchbox = () => (
             <Search
                 placeholder="search"
                 allowClear
-                //enterButton
                 size="large"
                 onSearch={onSearch}
                 style={{

@@ -5,6 +5,7 @@ import { Button } from "antd"
 export default function ProductItem({ product }) {
     return (
         <div className={styles.item}>
+            
             <Link to={`/products/id/${product.id}`}>
                 <img
                     style={{ width: '17rem', height: '17rem' }}

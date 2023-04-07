@@ -33,6 +33,7 @@ const lightTheme = {
             colorTextQuaternary:"#FFFFF",
            
         },
+        Badge:{fontSize:"16"}
     },
 };
 
