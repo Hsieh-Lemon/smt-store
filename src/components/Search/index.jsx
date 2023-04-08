@@ -12,15 +12,12 @@ const Searchbox = () => (
             colorTextPlaceholder: "#FFF",
             colorPrimaryHover: "rgba(241, 139, 162, 1)",
             controlOutline: "#FFF",
-            
-
         },
         components: {
          Button: {
             colorBgContainer: "#696D8A",
             colorBorder:"#FFF",
             lineWidth: "1",
-            
             },
         },
     }}

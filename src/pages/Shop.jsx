@@ -1,6 +1,7 @@
 import { Pagination } from 'antd';
 import { Helmet } from "react-helmet-async"
 import { useParams } from 'react-router-dom';
+import { theme } from 'antd';
 
 import Header from "../components/Header"
 import Footer from "../components/Footer"
@@ -12,28 +13,35 @@ import products from "../json/Products.json";
 
 function Shop() {
     const { categoryName } = useParams();
-  const _products = !categoryName
-    ? products
-    : products.filter(
-      x => x?.category.toUpperCase() === categoryName.toUpperCase()
-    );
+    const _products = !categoryName
+        ? products
+        : products.filter(
+            x => x?.category.toUpperCase() === categoryName.toUpperCase(),
+
+        );
+    const _pd = !categoryName
+        ? products
+        : products.filter(
+            x => x?.sku.toUpperCase() === categoryName.toUpperCase(),
+
+        );
     return (
         <div className="mainLayout">
-           
+
             <Header className="layoutHeader" />
             <div className="layoutContent container">
                 <h1>SHOP</h1>
                 <Search />
-                <NavBar2 products={_products} />
-                <Dropdown  />
-                <ProductList products={products} />
+                <NavBar2 />
+                <Dropdown />
+                <ProductList products={_products} pd={_pd} />
                 <Pagination defaultCurrent={1} total={50} />
-                
+
             </div>
-            
+
         </div>
-        
-        
+
+
     );
 }
 export default Shop;

@@ -10,37 +10,22 @@ import Product from './pages/Product';
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
     <ConfigProvider theme={lightTheme}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Shop />} />
-          <Route path="products">
+          
+          <Route path="products">            
                 <Route path="category/:categoryName" element={<Shop />} />
+                <Route path="author/:categoryName" element={<Shop />} />
                 <Route path="id/:productId" element={<Product />} />
-          </Route>
-          <Route path="products">
-            <Route path="id/:productId" element={<Product />} />
           </Route>
         </Routes>
       </BrowserRouter>
     </ConfigProvider>
 
-    // <div className="App">
-    //   <div className="card">
-    //     <button onClick={() => setCount((count) => count + 1)}>
-    //       count is {count}
-    //     </button>
-    //     <p>
-    //       Edit <code>src/App.jsx</code> and save to test HMR
-    //     </p>
-    //   </div>
-    //   <p className="read-the-docs">
-    //     Click on the Vite and React logos to learn more
-    //   </p>
-    // </div>
   )
 }
 

@@ -1,27 +1,28 @@
-import Nav2Link from '../Nav2Link';
+
+import NavLink from '../NavLink';
 import styles from './navbar2.module.css';
 import { RightOutlined } from '@ant-design/icons';
 
-export default function NavBar() {
+export default function NavBar2() {
 
     const NavBar2Content = () => (
         <>
-            <Nav2Link to="/products/category/album"
+            <NavLink to="/products/category/album"
                 className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
                 ALBUM
-            </Nav2Link>
-            <Nav2Link to="/products/category/photobook"
+            </NavLink>
+            <NavLink to="/products/category/photobook"
                 className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
                 PHOTOBOOK
-            </Nav2Link>
-            <Nav2Link to="/products/category/concert"
+            </NavLink>
+            <NavLink to="/products/category/concert"
                 className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
                 CONCERT
-            </Nav2Link>
-            <Nav2Link to="/products/category/fashion"
+            </NavLink>
+            <NavLink to="/products/category/fashion"
                 className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
                 FASHION
-            </Nav2Link>
+            </NavLink>
             {/* <Nav2Link to="/products/category/exclusive"
                 className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
                 EXCLUSIVE
