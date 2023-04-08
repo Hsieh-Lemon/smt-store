@@ -2,6 +2,8 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { Helmet } from "react-helmet-async"
 
+import Video from "../components/Video";
+
 function About() {
     return (
         <div className="mainLayout">

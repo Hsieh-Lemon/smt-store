@@ -20,7 +20,7 @@ export default function Gallery({ artist }) {
                                 />
                                 <figcaption>
                                     <h2><span>{artist.name}</span></h2>
-                                    <p>Sadie never took her eyes off me.</p>
+                                    <p>{artist.slogan}</p>
                                     <a href="#">View more</a>
                                 </figcaption>
                             </figure>

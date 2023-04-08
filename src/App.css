@@ -87,6 +87,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 50px;
+  flex-direction: column;
 }
 
 .boss_img img{
@@ -100,6 +101,7 @@ body {
   color: #000000;
   margin: 25px;
 }
+
 
 
 /*

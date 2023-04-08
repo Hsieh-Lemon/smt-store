@@ -12,6 +12,62 @@
     border-radius:22px ;
     width: 225px;
     height: 75px;
-    font-weight: 700;
+    font-weight: 600;
     color: #414666;
 }
+
+.videoArea{
+  display: flex;
+  
+}
+
+.slider{
+    width:560px;
+    height:315px;
+  
+  }
+
+  .slide iframe{
+    width:560px;
+    height:315px;
+    border-radius: 40px;
+  }
+  
+
+  .btn{
+    
+    margin-top: 5rem;
+  }
+  
+  .more{
+    
+    margin-top: 30px;
+  }
+  
+  .more p{
+    display: flex;
+    align-items: center;
+    color: #F18BA2;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Kanit';
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+  }
+  .more p:after{
+    content: '';
+    width: 0%;
+    height: 1.5px;
+    background-color: #F18BA2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all .3s linear;
+  }
+  .more p:hover::after{
+    width: 60px;
+  }
+  

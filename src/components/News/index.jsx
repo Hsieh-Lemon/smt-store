@@ -35,7 +35,7 @@ export default function News() {
                     xxl={{ span: 12 }}
                 >
                     <div className={styles.carousel}>
-                        <Carousel autoplay autoplaySpeed={8000} fade={true} dots={false}>
+                        <Carousel autoplay autoplaySpeed={6000} fade={true} dots={false}>
                             <div>
                                 <img className={styles.newsPic} src="/images/intothenewworld.jpg" />
                             </div>
