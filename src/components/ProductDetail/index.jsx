@@ -26,7 +26,7 @@ function ProductDetail({ product }) {
         <div className={styles.info}>
             <section key={product.name} >
                 <img
-                    style={{ width: '33rem', height: '33rem' }}
+                    // style={{ width: '33rem', height: '33rem' }}
                     src={product.image}
                     alt={product.name} />
             </section>
@@ -52,7 +52,7 @@ function ProductDetail({ product }) {
                             key={qty}
                             onChange={val => setQty(val)}
                             color="white" style={{ color: "black", fontSizeSM: "16px" }} >
-
+        
                         </Badge>
                     </ConfigProvider>
 

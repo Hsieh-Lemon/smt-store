@@ -1,9 +1,9 @@
 import { Row, Col } from "antd";
 import ProductItem from "../ProductItem";
 
-export default function ProductList({ productl,products, pd }) {
+export default function ProductList({ products, pd }) {
+  
   return (
-    <>
     
     <Row justify="space-around" gutter={[32, 32]}>
       {products.map(product => (
@@ -29,6 +29,6 @@ export default function ProductList({ productl,products, pd }) {
         </Col>
       ))}
     </Row>
-    </>
+    
   );
 }

@@ -18,8 +18,8 @@ const darkTheme = {
 const lightTheme = {
     algorithm: theme.defaultAlgorithm,
     token: {
-
         colorPrimary: "#F18BA2",
+        colorBgElevated:"#FEEEF2"
     },
     components: {
         Button: {

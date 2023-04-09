@@ -30,11 +30,11 @@ function Shop() {
 
             <Header className="layoutHeader" />
             <div className="layoutContent container">
-                <h1>SHOP</h1>
+                <div className="title"><h1>SHOP</h1></div>
                 <Search />
                 <NavBar2 />
                 <Dropdown />
-                <ProductList products={_products} pd={_pd} />
+                <ProductList  products={_products} pd={_pd} />
                 <Pagination defaultCurrent={1} total={50} />
 
             </div>

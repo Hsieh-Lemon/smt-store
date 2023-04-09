@@ -90,7 +90,7 @@ const menuProps = {
 };
 const DropDown = () => (
     <Space wrap>
-        <Dropdown menu={menuProps} >
+        <Dropdown menu={menuProps} overlayStyle={{ height:"15rem",colorBgElevated:"#F2C3CE",overflow:"scroll" }} >
             <Button style={{
                 width: 260,
                 height: 40,
@@ -99,7 +99,7 @@ const DropDown = () => (
                 marginTop: 57
             }}>
                 <a onClick={(e) => e.preventDefault()}>
-                <Space style={{ fontSize: 20 }}>
+                <Space style={{ fontSize: 20,width:200,justifyContent:"space-between" }}>
                     ALL
                     <DownOutlined />
                 </Space></a>

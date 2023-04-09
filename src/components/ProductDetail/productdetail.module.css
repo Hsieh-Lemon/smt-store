@@ -8,8 +8,11 @@
     justify-content: center;
     padding-top: 71px;
 }
+
 .info img{
     margin-right: 70px;
+    width: 33rem;
+     height: 33rem;
 }
 .author{
     font-size: 1.875rem;
@@ -37,3 +40,37 @@
     margin-bottom:4.938rem;
     margin-top:4.75rem ;
 }
+@media (max-width: 768px) {
+    .info{
+    flex-direction: column;
+    height: 100%;
+    width: 80%;
+    align-items: center;
+    padding-top: 17px;
+    }
+    .info img{
+        margin:0;
+        width: 17rem;
+         height: 17rem;
+    }
+    .author{
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+    .name{
+        font-size: 1.25rem;
+    }
+    .text{
+        font-size: 1rem;
+        margin: 1.1rem 0;
+    }
+    .word{
+        font-size: 1.25rem;
+        margin: 2.3rem 0;
+    }
+    .qty{
+        font-size: 1.625rem;
+        margin: 2rem 0 2.3rem;
+    }
+    
+  }

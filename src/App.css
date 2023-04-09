@@ -114,16 +114,18 @@
   grid-area: content;
 }
 
-.layoutContent h1 {
+.title{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border: solid 4px #F18BA2;
-  border-radius: 22px;
-  width: 225px;
-  height: 75px;
-  font-weight: 700;
-  color: #414666;
-  margin-top: 4rem;
-  margin-bottom: 3rem;
+    justify-content: center;
+    align-items: center;
+    border:solid 4px #F18BA2;
+    border-radius:22px ;
+    width: 225px;
+    height: 75px;
+    font-weight: 700;
+    color: #414666;
+    margin-top: 4rem;
+    margin-bottom: 2.438rem;
+    padding-top: 16px;
 }
+

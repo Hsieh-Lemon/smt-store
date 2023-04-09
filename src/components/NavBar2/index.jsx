@@ -1,43 +1,48 @@
-
+import { Button } from "antd"
 import NavLink from '../NavLink';
 import styles from './navbar2.module.css';
-import { RightOutlined } from '@ant-design/icons';
+import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 
 export default function NavBar2() {
-
+    
     const NavBar2Content = () => (
         <>
-            <NavLink to="/products/category/album"
+            <NavLink to="/products/category/album" id="1"
                 className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
                 ALBUM
             </NavLink>
-            <NavLink to="/products/category/photobook"
+            <NavLink to="/products/category/photobook" id="2"
                 className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
                 PHOTOBOOK
             </NavLink>
-            <NavLink to="/products/category/concert"
+            <NavLink to="/products/category/concert" id="3"
                 className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
                 CONCERT
             </NavLink>
-            <NavLink to="/products/category/fashion"
+            <NavLink to="/products/category/fashion" id="4"
                 className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
                 FASHION
             </NavLink>
-            {/* <Nav2Link to="/products/category/exclusive"
+            <NavLink to="/products/category/exclusive" id="5"
                 className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
                 EXCLUSIVE
-            </Nav2Link> */}
-                 
+            </NavLink>
+
         </>
     )
 
     return (
         <>
             <div className={styles.navBar2}>
-                <NavBar2Content />
-                <RightOutlined style={{marginLeft:-54}}/>
+                <Button  type="text">
+                    <LeftOutlined style={{ color: "#434868", height: "2em" }} />
+                </Button>
+                <section className={styles.content} ><NavBar2Content/></section>
+                <Button  type="text">
+                    <RightOutlined style={{ color: "#434868", height: "2em" }} />
+                </Button>
             </div>
-            
+
         </>
 
     );
