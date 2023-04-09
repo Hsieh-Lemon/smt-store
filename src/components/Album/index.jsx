@@ -10,6 +10,47 @@ export default function Album({ images }) {
   const [imageIndex, setImageIndex] = useState(0);
   const ref = useRef();
   
+  const breakpoints = {
+    xs: 480,
+    sm: 576,
+    md: 768,
+    lg: 992,
+    xl: 1200,
+    xxl: 1600,
+  };
+  const responsive = {
+    xs: {
+      dots: false,
+      arrows: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    },
+    sm: {
+      dots: false,
+      arrows: false,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+    },
+    md: {
+      dots: false,
+      arrows: false,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+    },
+    lg: {
+      dots: false,
+      arrows: false,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+    },
+    xl: {
+      dots: false,
+      arrows: false,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+    },
+  };
+ 
   const settings = {
     dots: false,
     lazyLoad: true,
@@ -30,7 +71,7 @@ export default function Album({ images }) {
             {
               images.map((img, idx) => (
                 <div className={idx === imageIndex ? styles.activeSlide : styles.slide}>
-                  <img src={img.img} />
+                  <a><img src={img.img} /></a>
                   <div className={styles.description}>
                     <p className={styles.name}>{img.name}</p>
                     <p className={styles.albumName}>{img.description}</p>

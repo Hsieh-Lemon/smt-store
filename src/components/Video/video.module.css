@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     flex-direction:column;
-    
+    margin-bottom: 150px;
 }
 .title{
     display: flex;
@@ -14,17 +14,24 @@
     height: 75px;
     font-weight: 600;
     color: #414666;
+    margin-bottom: 70px;
 }
 
-.videoArea{
+.contentArea{
   display: flex;
-  
+  flex-direction: row;
 }
+
 
 .slider{
     width:560px;
     height:315px;
-  
+  }
+
+.slider2{
+    width:250px;
+    height:150px;
+    padding-top: 40px;
   }
 
   .slide iframe{
@@ -33,23 +40,27 @@
     border-radius: 40px;
   }
   
+  .slide2 h1,h2{
+    color: #414666;
+    font-family: 'Kanit';
+  }
 
   .btn{
-    
-    margin-top: 5rem;
+    padding-top: 50px;
   }
-  
+
   .more{
+    position: relative;
     
-    margin-top: 30px;
+    
   }
-  
+
   .more p{
     display: flex;
     align-items: center;
     color: #F18BA2;
     justify-content: center;
-    margin-top: 30px;
+    margin: 0;
     font-size: 20px;
     font-weight: 400;
     font-family: 'Kanit';
@@ -69,5 +80,22 @@
   }
   .more p:hover::after{
     width: 60px;
+  }
+  
+
+  @media (min-width: 769px) {
+    .btn{
+      padding-top: 150px;
+    }
+    .slider2{
+      width:250px;
+      height:315px;
+      padding-top: 100px;
+    }
+    .more{
+      position: relative;
+      bottom: 50px;
+      padding-left: 500px;
+    }
   }
   
