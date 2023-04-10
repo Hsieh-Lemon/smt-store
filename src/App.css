@@ -114,15 +114,17 @@
   grid-area: content;
 }
 
-.title{
-  display: flex;
-    justify-content: center;
-    align-items: center;
+.mainLayout title{
+    display: flex;
+    justify-self: center;
+   justify-content: center;
+    align-self: center;
     border:solid 4px #F18BA2;
     border-radius:22px ;
     width: 225px;
     height: 75px;
     font-weight: 700;
+    font-size: 2rem;
     color: #414666;
     margin-top: 4rem;
     margin-bottom: 2.438rem;

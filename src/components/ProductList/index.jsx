@@ -25,7 +25,7 @@ export default function ProductList({ products, pd }) {
           xl={{ span: 8 }}
           xxl={{ span: 6 }}
         >
-          <ProductItem product={product} />
+          <ProductItem product={product}  />
         </Col>
       ))}
     </Row>

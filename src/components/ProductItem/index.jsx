@@ -1,11 +1,16 @@
 import styles from './productitem.module.css';
 import Link from '../Link';
-import { Button } from "antd"
+import { Button,theme } from "antd"
 
 export default function ProductItem({ product }) {
+    const {
+        token: { colorBgBase,colorTextBase },
+      } = theme.useToken();
     return (
         <div className={styles.item}>
+            
             <section>
+            
                 <Link to={`/products/id/${product.id}`}>
                     <img
                         style={{ width: '17rem', height: '17rem' }}
@@ -23,7 +28,7 @@ export default function ProductItem({ product }) {
                     <span className={styles.text}>
                         $ {product.price}
                         <Button type="link" className={styles.btn}>
-                            <img className={styles.image} src="/images/bags.svg" />
+                        <Link to={`/products/id/${product.id}`}><img className={styles.image} src="/images/bags.svg" /></Link>
                         </Button>
                     </span>
                 </div>

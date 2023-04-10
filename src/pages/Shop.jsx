@@ -5,6 +5,7 @@ import { theme } from 'antd';
 
 import Header from "../components/Header"
 import Footer from "../components/Footer"
+import CartSummary from "../components/CartSummary";
 import Search from '../components/Search';
 import NavBar2 from '../components/NavBar2'
 import Dropdown from '../components/DropDown';
@@ -12,6 +13,9 @@ import ProductList from "../components/ProductList";
 import products from "../json/Products.json";
 
 function Shop() {
+    const {
+        token: { colorBgBase, colorTextBase },
+    } = theme.useToken();
     const { categoryName } = useParams();
     const _products = !categoryName
         ? products
@@ -27,14 +31,20 @@ function Shop() {
         );
     return (
         <div className="mainLayout">
-
-            <Header className="layoutHeader" />
+            {/* <Header className="layoutHeader" /> */}
+            <Helmet><style>{`
+            body { 
+                background-color: ${colorBgBase}; 
+                 color: ${colorTextBase};
+                }
+            `}</style></Helmet>
             <div className="layoutContent container">
-                <div className="title"><h1>SHOP</h1></div>
+            <CartSummary/>
+                <title>SHOP</title>
                 <Search />
                 <NavBar2 />
                 <Dropdown />
-                <ProductList  products={_products} pd={_pd} />
+                <ProductList products={_products} pd={_pd} />
                 <Pagination defaultCurrent={1} total={50} />
 
             </div>

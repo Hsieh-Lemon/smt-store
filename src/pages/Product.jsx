@@ -9,14 +9,23 @@ import products from "../json/Products.json";
 
 
 function Product() {
+    const {
+        token: { colorBgBase,colorTextBase },
+      } = theme.useToken();
     const { productId } = useParams();
     const product = products.find(
         (x) => x.id === productId
      );
     return (
         <div className="mainLayout">
-
-            <Header className="layoutHeader" />
+            
+            {/* <Header className="layoutHeader" /> */}
+            <Helmet><style>{`
+               body { 
+                  background-color: ${colorBgBase}; 
+                  color: ${colorTextBase}
+               }
+            `}</style></Helmet>
             <div className="layoutContent container">
                 <ProductDetail product={product} />
 

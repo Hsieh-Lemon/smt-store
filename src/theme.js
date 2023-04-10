@@ -3,7 +3,9 @@ import { theme } from "antd";
 const darkTheme = {
     algorithm: theme.darkAlgorithm,
     token:{
-        colorPrimary:"1A1A29",
+        colorBgBase:"1A1A29",
+        colorTextBase: "#ffffff",
+        colorPrimary: "#F18BA2",
     },
     components: {
         Button: {
@@ -12,6 +14,13 @@ const darkTheme = {
             colorText: "#F18BA2",
 
         },
+        Input:{
+            colorBgContainer:" #696D8A",
+            colorBorder:"#696D8A",
+            colorTextQuaternary:"#FFFFF",
+           
+        },
+        Badge:{fontSize:"16"}
     },
 };
 

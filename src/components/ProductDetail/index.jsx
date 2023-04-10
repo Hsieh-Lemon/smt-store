@@ -9,9 +9,13 @@ const { Option } = Badge;
 
 function ProductDetail({ product }) {
     const [qty, setQty] = useState(product.countInStock > 0 ? 1 : 0);
-
+    const sum = product.price * qty;
     const increase = () => {
-        setQty(qty + 1);
+        let newCount = qty + 1;
+        if (newCount >= product.countInStock){
+            newCount=product.countInStock;
+        }
+        setQty(newCount);
     };
     const decline = () => {
         let newCount = qty - 1;
@@ -20,13 +24,14 @@ function ProductDetail({ product }) {
         }
         setQty(newCount);
     };
-
+    function roundToTwo(num) {
+        return +(Math.round(num + "e+2")  + "e-2");
+    }
     return (
 
         <div className={styles.info}>
             <section key={product.name} >
                 <img
-                    // style={{ width: '33rem', height: '33rem' }}
                     src={product.image}
                     alt={product.name} />
             </section>
@@ -63,10 +68,10 @@ function ProductDetail({ product }) {
                         TOTAL
                     </p>
                     <p className={styles.qty}>
-                        $ {product.price * qty}
+                        $ {roundToTwo(sum)}
                     </p>
                 </div>
-                <AddToCart />
+                <AddToCart product={product} qty={qty} />
             </section>
         </div>
 
