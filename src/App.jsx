@@ -1,5 +1,12 @@
-import 'antd/dist/reset.css'
+import 'antd/dist/reset.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
+import { ConfigProvider } from 'antd';
+import { Provider } from "react-redux";
+import { lightTheme, darkTheme } from './theme';
+
+import Shop from './pages/Shop'
+import Product from './pages/Product';
 import './App.css'
 import Home from './pages/Home'
 import Artist from './pages/Artist'
@@ -7,8 +14,11 @@ import About from './pages/About'
 import { HelmetProvider } from 'react-helmet-async'
 import { ConfigProvider } from 'antd'
 import { darkTheme, lightTheme } from './theme';
+import store from './redux/store';
 
 function App() {
+  const [count, setCount] = useState(0)
+
   return (
     <ConfigProvider theme={lightTheme} >
       <HelmetProvider context={{}}>

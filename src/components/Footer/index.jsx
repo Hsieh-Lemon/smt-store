@@ -25,3 +25,6 @@ export default function Footer() {
         </div>
     )
 }
+export default function Footer(){
+
+}
