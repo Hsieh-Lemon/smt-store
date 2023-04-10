@@ -13,7 +13,7 @@
     border-radius:22px ;
     width: 225px;
     height: 75px;
-    font-weight: 700;
+    font-weight: 600;
     color: #414666;
     margin-bottom: 40px;
 }
@@ -30,6 +30,8 @@
     border-radius: 20px;
     background-color: #FCE1E7;
     font-size: 1rem;
+    font-weight: 300;
+    font-family: 'Kanit';
     color: #414666;
     align-items: center;
     justify-content: center;
@@ -51,6 +53,8 @@
     justify-content: center;
     margin-top: 30px;
     font-size: 20px;
+    font-weight: 400;
+    font-family: 'Kanit';
     display: inline-block;
     vertical-align: middle;
     position: relative;
@@ -66,7 +70,7 @@
     transition: all .3s linear;
 }
 .more:hover::after{
-    width: 70px;
+    width: 60px;
 }
 
 .carousel{

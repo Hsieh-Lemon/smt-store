@@ -8,33 +8,18 @@ import { lightTheme, darkTheme } from './theme';
 import Shop from './pages/Shop'
 import Product from './pages/Product';
 import './App.css'
-import Home from './pages/Home'
-import Artist from './pages/Artist'
-import About from './pages/About'
-import { HelmetProvider } from 'react-helmet-async'
-import { ConfigProvider } from 'antd'
-import { darkTheme, lightTheme } from './theme';
+import { Provider } from "react-redux";
+import Router from './Router';
+import store from './redux/store';
 import store from './redux/store';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <ConfigProvider theme={lightTheme} >
-      <HelmetProvider context={{}}>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="artist" element={<Artist />} >
-              <Route path="category/:categoryName" element={<Artist />} />
-            </Route>
-            <Route path="about" element={<About />} />
-            <Route path="shop" element={<Home />} />
-
-          </Routes>
-        </BrowserRouter>
-      </HelmetProvider>
-    </ConfigProvider>
+    <Provider store={store}>
+      <Router/>
+    </Provider>
   )
 }
 

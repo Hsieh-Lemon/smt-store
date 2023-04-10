@@ -3,7 +3,6 @@
     justify-content: space-between;
     align-items: center;
     height: 85px;
-    background-color: #FCE1E7;
     width: 100%;
     position: fixed;
     top: 0;
@@ -22,12 +21,13 @@
 }
 
 .IconArea{
-margin-right: 1rem;
+    display: flex;
+    margin-right: 1rem;
 }
 
 .icon{
-    height: 48px;
-    width: 48px;
+    height: 40px;
+    width: 40px;
     margin-left: 15px;
 }
 

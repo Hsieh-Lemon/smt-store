@@ -4,10 +4,10 @@ const darkTheme = {
   algorithm: theme.darkAlgorithm,
   token: {
     colorPrimary: "#1677ff",
-    colorBgBase	: "#222222",
+    colorBgBase	: "#F18BA2",
+    colorBg:"#1A1A29",
     colorTextBase: "#ffffff",
-    colorTextFooter: "#ffffff",
-    colorBgFooter: "#000000",
+    colorBgHeader: "#F18BA2",
   },
   components: {
     Button: {
@@ -31,8 +31,9 @@ const lightTheme = {
   algorithm: theme.defaultAlgorithm,
   token: {
     colorBgBase	: "#FCE1E7",
-    colorBgFooter: "#3e3f97",
-    colorTextFooter: '#ffffff',
+    colorBg:"#ffffff",
+    colorTextBase: "#434868",
+    colorBgHeader: "#FCE1E7",
     colorBorder: "#F18BA2",
             lineWidth: "4",
             colorText: "#F18BA2",

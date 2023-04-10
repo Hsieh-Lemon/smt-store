@@ -3,13 +3,20 @@ import NavBar from "../NavBar";
 import { useState } from "react";
 import { Link } from "react-router-dom"
 import HamburgerMenu from "../HamburgerMenu"
+import { theme } from 'antd';
+import SetColorMode from "../SetColorMode"
 
 export default function Header() {
     const [isOnTouch, setIsOnTouch] = useState(false);
+    const {
+        token: { colorBgHeader},
+    } = theme.useToken();
 
     return (
         <div>
-            <div className={styles.header}>
+            <div className={styles.header} style={{
+            backgroundColor:colorBgHeader ,
+            }}>
                 <HamburgerMenu
                     onClick={() => setIsOnTouch(!isOnTouch)}
                     isOnTouch={isOnTouch}
@@ -19,6 +26,7 @@ export default function Header() {
                 </Link>
                 <NavBar open={isOnTouch} onClose={() => setIsOnTouch(false)} />
                 <div className={styles.IconArea}>
+                    <SetColorMode/>
                     <a href="#">
                         <img className={styles.icon} src="/images/LOGIN.svg" alt="login" />
                     </a>
