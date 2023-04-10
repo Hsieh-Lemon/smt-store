@@ -11,21 +11,21 @@ const items = [
         key: '0',
     },
     {
-        label: <NavLink to="/artist/category/solo"
+        label: <NavLink to="/artist/artcategory/solo"
             className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
             SOLO
         </NavLink>,
         key: '1',
     },
     {
-        label: <NavLink to="/artist/category/boys-team"
+        label: <NavLink to="/artist/artcategory/boys-team"
             className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
             BOYS TEAM
         </NavLink>,
         key: '3',
     },
     {
-        label: <NavLink to="/artist/category/girls-team"
+        label: <NavLink to="/artist/artcategory/girls-team"
             className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
             GIRLS TEAM
         </NavLink>,
@@ -42,22 +42,22 @@ const items = [
 
 export default function ArtistSelect() {
     return (
-
-        <div className={styles.click}>
-            <Dropdown
-                menu={{
-                    items,
-                }}
-                trigger={['click']}
-            >
-                <a onClick={(e) => e.preventDefault()}>
-                    <Space>
-                        Category
-                        <DownOutlined />
-                    </Space>
-                </a>
-            </Dropdown>
+        <div className={styles.layout}>
+            <div className={styles.click}>
+                <Dropdown
+                    menu={{
+                        items,
+                    }}
+                    trigger={['click']}
+                >
+                    <a onClick={(e) => e.preventDefault()}>
+                        <Space>
+                            Category
+                            <DownOutlined />
+                        </Space>
+                    </a>
+                </Dropdown>
+            </div>
         </div>
-
     )
 }

@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     flex-direction:column;
-    margin-bottom: 150px;
+    margin-bottom: 120px;
 }
 .title{
     display: flex;
@@ -40,9 +40,15 @@
     border-radius: 40px;
   }
   
-  .slide2 h1,h2{
+  .slide2 h1{
     color: #414666;
     font-family: 'Kanit';
+  }
+
+  .slide2 h2{
+    color: #414666;
+    font-family: 'Kanit';
+    font-weight: 400;
   }
 
   .btn{

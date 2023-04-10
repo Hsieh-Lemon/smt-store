@@ -21,6 +21,13 @@
   }
 
 
+  .layout{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 75px;
+    margin-top: 65px;
+  }
+
 
   .click{
     display: flex;

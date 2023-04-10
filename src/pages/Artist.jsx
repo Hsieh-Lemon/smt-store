@@ -9,11 +9,11 @@ import ArtistSelect from "../components/ArtistSelect";
 import { useParams } from 'react-router-dom';
 
 function Artist(){
-    const { categoryName } = useParams();
-    const _artists = !categoryName
+    const { artcategoryName } = useParams();
+    const _artists = !artcategoryName
     ? artists
     : artists.filter(
-        x => x?.category.toUpperCase() === categoryName.toUpperCase()
+        x => x?.category.toUpperCase() === artcategoryName.toUpperCase()
       );
 
     return(

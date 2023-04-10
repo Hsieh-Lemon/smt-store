@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom"
 import HamburgerMenu from "../HamburgerMenu"
 
+
 export default function Header() {
     const [isOnTouch, setIsOnTouch] = useState(false);
 
@@ -19,6 +20,7 @@ export default function Header() {
                 </Link>
                 <NavBar open={isOnTouch} onClose={() => setIsOnTouch(false)} />
                 <div className={styles.IconArea}>
+                    
                     <a href="#">
                         <img className={styles.icon} src="/images/LOGIN.svg" alt="login" />
                     </a>

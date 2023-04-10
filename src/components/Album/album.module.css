@@ -32,10 +32,11 @@
   width:300px;
   height:300px;
   border: solid 1px #b3b4b4;
+  margin: auto;
 }
 
 .slide {
-  transform: scale(0.7);
+  transform: scale(1);
   transition: 0.5s;
 }
 .slide p{
@@ -43,7 +44,7 @@
 }
 
 .activeSlide {
-  transform: scale(1.1);
+  transform: scale(1);
   composes:slide ;
 }
 .activeSlide p{
@@ -108,4 +109,28 @@
 .more p:hover::after{
   width: 60px;
 }
+
+@media (min-width: 768px) {
+  .slide {
+    transform: scale(0.6);
+    transition: 0.5s;
+  }
+  .activeSlide {
+    transform: scale(0.9);
+    composes:slide ;
+  }
+
+}
+@media (min-width: 992px) {
+  .slide {
+    transform: scale(0.7);
+    transition: 0.5s;
+  }
+  .activeSlide {
+    transform: scale(1.1);
+    composes:slide ;
+  }
+
+}
+
 

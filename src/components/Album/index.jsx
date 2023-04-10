@@ -1,6 +1,6 @@
 import styles from "./album.module.css";
 import { Button, Carousel } from 'antd';
-import { RightOutlined, LeftOutlined,RightCircleOutlined,LeftCircleOutlined} from '@ant-design/icons';
+import { RightOutlined, LeftOutlined, RightCircleOutlined, LeftCircleOutlined } from '@ant-design/icons';
 import { useState } from "react";
 import { useRef } from "react";
 
@@ -9,48 +9,45 @@ import { useRef } from "react";
 export default function Album({ images }) {
   const [imageIndex, setImageIndex] = useState(0);
   const ref = useRef();
-  
-  const breakpoints = {
-    xs: 480,
-    sm: 576,
-    md: 768,
-    lg: 992,
-    xl: 1200,
-    xxl: 1600,
-  };
+
   const responsive = {
-    xs: {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
       dots: false,
-      arrows: false,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-    },
-    sm: {
-      dots: false,
-      arrows: false,
-      slidesToShow: 2,
-      slidesToScroll: 1,
-    },
-    md: {
-      dots: false,
-      arrows: false,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-    },
-    lg: {
-      dots: false,
-      arrows: false,
-      slidesToShow: 4,
-      slidesToScroll: 1,
-    },
-    xl: {
-      dots: false,
-      arrows: false,
+      lazyLoad: true,
+      infinite: true,
+      speed: 500,
       slidesToShow: 5,
-      slidesToScroll: 1,
+      SlidesToScroll: 1,
+      centerMode: true,
+      centerPadding: 0,
+      beforeChange: (current, next) => setImageIndex(next),
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      dots: false,
+      lazyLoad: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      SlidesToScroll: 1,
+      centerMode: true,
+      centerPadding: 0,
+      beforeChange: (current, next) => setImageIndex(next),
+    },
+    mobile: {
+      dots: false,
+      lazyLoad: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      SlidesToScroll: 1,
+      centerMode: true,
+      centerPadding: 0,
+      beforeChange: (current, next) => setImageIndex(next),
     },
   };
- 
+
   const settings = {
     dots: false,
     lazyLoad: true,
@@ -61,6 +58,29 @@ export default function Album({ images }) {
     centerMode: true,
     centerPadding: 0,
     beforeChange: (current, next) => setImageIndex(next),
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 5,
+          SlidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 3,
+          SlidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 464,
+        settings: {
+          slidesToShow: 1,
+          SlidesToScroll: 1,
+        }
+      }
+    ]
   };
   return (
     <div className={styles.album}>
