@@ -7,7 +7,7 @@ import Product from './pages/Product';
 import { HelmetProvider } from 'react-helmet-async'
 import { ConfigProvider } from 'antd'
 import { darkTheme, lightTheme } from './theme';
-import { selectLightMode } from "./redux/colorSLice";
+import { selectLightMode } from "./redux/colorSlice";
 import { useSelector } from "react-redux";
 
 
