@@ -23,12 +23,14 @@
 .IconArea{
     display: flex;
     margin-right: 1rem;
+  align-items: center;
 }
 
 .icon{
     height: 40px;
     width: 40px;
-    margin-left: 15px;
+    margin: 0 20px ;
+   
 }
 
 @media (min-width: 768px) {
@@ -38,24 +40,7 @@
         width: auto;
         margin-left: 70px;
     }
-    .icon{
-        height: 48px;
-        width: 48px;
-        margin-left: 30px;
-    }
+    
   }
 
-
-@media (min-width: 768px) {
-    .logo{
-        display: flex;
-        height: 48px;
-        width: auto;
-        margin-left: 70px;
-    }
-    .icon{
-        height: 48px;
-        width: 48px;
-        margin-left: 30px;
-    }
-  }
+  

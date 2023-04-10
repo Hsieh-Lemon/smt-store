@@ -2,12 +2,16 @@ import { useState } from "react";
 import { MinusOutlined, PlusOutlined } from '@ant-design/icons';
 import { Badge, Button, Space } from 'antd';
 import { ConfigProvider } from 'antd';
+import { theme } from 'antd';
 
 import AddToCart from "../AddToCart"
 import styles from "./productdetail.module.css"
 const { Option } = Badge;
 
 function ProductDetail({ product }) {
+    const {
+        token: { colorTextBase,colorTextBase2 },
+      } = theme.useToken();
     const [qty, setQty] = useState(product.countInStock > 0 ? 1 : 0);
     const sum = product.price * qty;
     const increase = () => {
@@ -29,7 +33,7 @@ function ProductDetail({ product }) {
     }
     return (
 
-        <div className={styles.info}>
+        <div className={styles.info} style={{color: colorTextBase2,}}>
             <section key={product.name} >
                 <img
                     src={product.image}
@@ -39,7 +43,7 @@ function ProductDetail({ product }) {
                 <h3 className={styles.author}>
                     {product.author}
                 </h3>
-                <h2 className={styles.name}>
+                <h2 className={styles.name} style={{color: colorTextBase,}}>
                     {product.name}
                 </h2>
                 <h3 className={styles.text}>

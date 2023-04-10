@@ -17,8 +17,8 @@ export default function CartSummary() {
 
     return (
         <nav onClick={toggleModal} className={styles.cartSummary} >
-            <Badge count={count} color="red"  style={{ color: 'white' }}>
-                <CartIcon size={45} />
+            <Badge count={count} color="red" style={{ color: 'white',marginTop:'5px' }}>
+                <CartIcon size={40} />
             </Badge>
 
         </nav>

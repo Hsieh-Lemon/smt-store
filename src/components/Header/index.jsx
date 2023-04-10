@@ -3,6 +3,7 @@ import NavBar from "../NavBar";
 import { useState } from "react";
 import { Link } from "react-router-dom"
 import HamburgerMenu from "../HamburgerMenu"
+import CartSummary from "../CartSummary";
 import { theme } from 'antd';
 import SetColorMode from "../SetColorMode"
 
@@ -30,9 +31,7 @@ export default function Header() {
                     <a href="#">
                         <img className={styles.icon} src="/images/LOGIN.svg" alt="login" />
                     </a>
-                    <a href="#">
-                        <img className={styles.icon} src="/images/BAG.svg" alt="bag" />
-                    </a>
+                    <CartSummary style={{marginTop:'5px'}}/>
                 </div>
 
             </div>

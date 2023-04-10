@@ -102,51 +102,11 @@ body {
   margin: 25px;
 }
 
-
-
-/*
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.search{
+  display: flex;
+  justify-content: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-} */
 
 /* RWD Container */
 .container {
@@ -197,7 +157,7 @@ body {
     "content"
     "footer";
   grid-template-rows: auto 1fr auto;
-  gap: 1em;
+  /* gap: 1em; */
   margin-bottom: 0;
   padding-bottom: 0;
 
@@ -223,17 +183,17 @@ body {
 
 .mainLayout title{
     display: flex;
-    justify-self: center;
+    
    justify-content: center;
-    align-self: center;
+    align-items: center;
     border:solid 4px #F18BA2;
     border-radius:22px ;
     width: 225px;
     height: 75px;
     font-weight: 700;
     font-size: 2rem;
-    color: #414666;
+    
     margin-top: 4rem;
     margin-bottom: 2.438rem;
-    padding-top: 16px;
+    
 }

@@ -9,18 +9,18 @@ import ArtistSelect from "../components/ArtistSelect";
 import { useParams } from 'react-router-dom';
 import { theme } from 'antd';
 
-function Artist(){
+function Artist() {
     const {
         token: { colorBg, colorTextBase },
     } = theme.useToken();
     const { artcategoryName } = useParams();
     const _artists = !artcategoryName
-    ? artists
-    : artists.filter(
-        x => x?.category.toUpperCase() === artcategoryName.toUpperCase()
-      );
+        ? artists
+        : artists.filter(
+            x => x?.category.toUpperCase() === artcategoryName.toUpperCase()
+        );
 
-    return(
+    return (
         <div className="mainLayout">
             <Helmet>
                 <title>ARTIST</title>
@@ -33,14 +33,18 @@ function Artist(){
             </Helmet>
             <Header className="layoutHeader" />
             <div className="layoutContent" >
-                <ArtistTop/>
-                <Search/>
-                <ArtistSelect/>
-                <Gallery artist={_artists}/>
+                <ArtistTop />
+                <div className="search">
+                    <Search />
+                </div>
+                <div className="search">
+                    <ArtistSelect />
+                </div>
+                <Gallery artist={_artists} />
             </div>
             <Footer className="layoutFooter" />
         </div>
-        
+
     )
 }
 

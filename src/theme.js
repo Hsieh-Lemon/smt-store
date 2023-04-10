@@ -7,12 +7,13 @@ const darkTheme = {
     colorBgBase	: "#F18BA2",
     colorBg:"#1A1A29",
     colorTextBase: "#ffffff",
+    colorTextBase2: "#ffffff",
     colorBgHeader: "#F18BA2",
   },
   components: {
     Button: {
-      colorPrimary: "#6366f2;",
-      colorPrimaryHover: "#9192f5",
+      colorPrimary: "#F18BA2",
+      colorPrimaryHover: "#FFB6C7",
       colorBorder: "#F18BA2",
             lineWidth: "4",
             colorText: "#F18BA2",
@@ -33,22 +34,23 @@ const lightTheme = {
     colorBgBase	: "#FCE1E7",
     colorBg:"#ffffff",
     colorTextBase: "#434868",
+    colorTextBase2: "#000000",
     colorBgHeader: "#FCE1E7",
-    colorBorder: "#F18BA2",
-            lineWidth: "4",
-            colorText: "#F18BA2",
+    // colorBorder: "#F18BA2",
+    //         lineWidth: "4",
+    //         colorText: "#F18BA2",
   },
   components: {
     Button: {
-      colorPrimary: "#6366f2;",
-      colorPrimaryHover: "#9192f5",
+      colorPrimary: "#F18BA2",
+     colorPrimaryHover: "#FFB6C7",
       colorBorder: "#F18BA2",
             lineWidth: "4",
             colorText: "#F18BA2",
     },
     Input:{
         colorBgContainer:"#696D8A",
-        colorBorder:"#696D8A",
+        // colorBorder:"#696D8A",
         colorTextQuaternary:"#FFFFF",
        
 

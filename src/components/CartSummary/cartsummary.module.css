@@ -1,9 +1,10 @@
 .cartSummary {
     display: inline-block;
-    position: absolute;
+    /* position: absolute; */
     top: 1.5rem;
     right: 0.5rem;
     cursor: pointer;
+    padding-top: 6px;
   }
   
   .cartText {
@@ -12,8 +13,9 @@
     margin-top: -4px;
   }
  
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     .cartSummary {
        right: 1.5rem;
     }
+    
   }

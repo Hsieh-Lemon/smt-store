@@ -1,15 +1,9 @@
 import styles from "./artistselect.module.css";
-import { NavLink } from 'react-router-dom';
 import { DownOutlined } from '@ant-design/icons';
-import { Dropdown, Space } from 'antd';
+import { Button, Dropdown, Space } from 'antd';
+import NavLink from '../NavLink';
 const items = [
-    {
-        label: <NavLink to="/artist"
-            className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
-            ALL
-        </NavLink>,
-        key: '0',
-    },
+    
     {
         label: <NavLink to="/artist/artcategory/solo"
             className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
@@ -22,14 +16,14 @@ const items = [
             className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
             BOYS TEAM
         </NavLink>,
-        key: '3',
+        key: '2',
     },
     {
         label: <NavLink to="/artist/artcategory/girls-team"
             className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
             GIRLS TEAM
         </NavLink>,
-        key: '4',
+        key: '3',
     },
     {
         label: <NavLink to="/artist"
@@ -40,24 +34,26 @@ const items = [
     },
 ];
 
-export default function ArtistSelect() {
-    return (
-        <div className={styles.layout}>
-            <div className={styles.click}>
-                <Dropdown
-                    menu={{
-                        items,
-                    }}
-                    trigger={['click']}
-                >
-                    <a onClick={(e) => e.preventDefault()}>
-                        <Space>
-                            Category
-                            <DownOutlined />
-                        </Space>
-                    </a>
-                </Dropdown>
-            </div>
-        </div>
-    )
-}
+const menuProps = {
+    items,
+};
+const ArtistSelect = () => (
+    <Space wrap>
+        <Dropdown menu={menuProps} overlayStyle={{ height:"15rem",colorBgElevated:"#F2C3CE",overflow:"scroll" }} >
+            <Button style={{
+                width: 260,
+                height: 40,
+                borderRadius: 13,
+                marginBottom: 62,
+                marginTop: 57
+            }}>
+                <a onClick={(e) => e.preventDefault()}>
+                <Space style={{ fontSize: 20,width:200,justifyContent:"space-between" }}>
+                    ALL
+                    <DownOutlined />
+                </Space></a>
+            </Button>
+        </Dropdown>
+    </Space>
+);
+export default ArtistSelect;

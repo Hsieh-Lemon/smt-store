@@ -10,8 +10,8 @@ import products from "../json/Products.json";
 
 function Product() {
     const {
-        token: { colorBgBase,colorTextBase },
-      } = theme.useToken();
+        token: { colorBg},
+    } = theme.useToken();
     const { productId } = useParams();
     const product = products.find(
         (x) => x.id === productId
@@ -19,19 +19,17 @@ function Product() {
     return (
         <div className="mainLayout">
             
-            {/* <Header className="layoutHeader" /> */}
+            <Header className="layoutHeader" />
             <Helmet><style>{`
                body { 
-                  background-color: ${colorBgBase}; 
-                  color: ${colorTextBase}
+                  background-color: ${colorBg}; 
                }
             `}</style></Helmet>
             <div className="layoutContent container">
                 <ProductDetail product={product} />
 
-
             </div>
-
+            <Footer className="layoutFooter" />
         </div>
 
 
