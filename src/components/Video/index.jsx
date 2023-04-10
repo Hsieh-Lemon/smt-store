@@ -3,11 +3,15 @@ import { Button, Carousel } from 'antd';
 import { RightOutlined, LeftOutlined, RightCircleOutlined, LeftCircleOutlined } from '@ant-design/icons';
 import { useRef } from "react";
 import { Row, Col } from "antd";
+import { theme } from 'antd';
 
 
 export default function Video({ video }) {
     const ref = useRef();
     const ref2 = useRef();
+    const {
+        token: { colorTextBase },
+    } = theme.useToken();
 
     const settings = {
         dots: false,
@@ -16,8 +20,13 @@ export default function Video({ video }) {
         speed: 500,
     };
     return (
+
         <div className={styles.layout}>
-            <h1 className={styles.title}>VIDEO</h1>
+            <h1 className={styles.title}
+                style={{color: colorTextBase,}}
+            >
+                VIDEO
+            </h1>
             <Row className={styles.contentArea} >
                 <Col className={styles.slider} type="flex" justify="center" align="middle"
                     sm={{ span: 24 }}
@@ -45,8 +54,8 @@ export default function Video({ video }) {
                         {
                             video.map((video) => (
                                 <div className={styles.slide2}>
-                                    <h1>{video.name}</h1>
-                                    <h2>{video.description}</h2>
+                                    <h1 style={{color:colorTextBase,}}>{video.name}</h1>
+                                    <h2 style={{color:colorTextBase,}}>{video.description}</h2>
                                 </div>
                             ))
                         }
@@ -71,5 +80,6 @@ export default function Video({ video }) {
             </Row>
             <div className={styles.more}><a href="#"><p>More...</p></a></div>
         </div>
+
     )
 }

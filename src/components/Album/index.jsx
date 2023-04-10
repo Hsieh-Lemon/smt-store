@@ -3,12 +3,15 @@ import { Button, Carousel } from 'antd';
 import { RightOutlined, LeftOutlined, RightCircleOutlined, LeftCircleOutlined } from '@ant-design/icons';
 import { useState } from "react";
 import { useRef } from "react";
-
+import { theme } from 'antd';
 
 
 export default function Album({ images }) {
   const [imageIndex, setImageIndex] = useState(0);
   const ref = useRef();
+  const {
+    token: { colorTextBase },
+  } = theme.useToken();
 
   const responsive = {
     desktop: {
@@ -83,16 +86,17 @@ export default function Album({ images }) {
     ]
   };
   return (
+
     <div className={styles.album}>
       <div className={styles.layout}>
-        <h1 className={styles.title}>ALBUM</h1>
+        <h1 className={styles.title} style={{color: colorTextBase,}}>ALBUM</h1>
         <div className={styles.slider}>
           <Carousel {...settings} ref={ref}>
             {
               images.map((img, idx) => (
                 <div className={idx === imageIndex ? styles.activeSlide : styles.slide}>
                   <a><img src={img.img} /></a>
-                  <div className={styles.description}>
+                  <div className={styles.description} style={{color: colorTextBase,}}>
                     <p className={styles.name}>{img.name}</p>
                     <p className={styles.albumName}>{img.description}</p>
                   </div>
@@ -118,5 +122,6 @@ export default function Album({ images }) {
       </div>
       <div className={styles.more}><a href="#"> <p>More...</p></a></div>
     </div>
+
   );
 }

@@ -44,7 +44,7 @@
 body {
   font-size: 16px;
   line-height: 1.6;
-  background-color: #ffffff;
+ 
   color: rgb(0, 0, 0);
 }
 
@@ -66,7 +66,7 @@ body {
   padding: 0;
   height: auto;
   line-height: 1.6;
-  background-color: #ffffff;
+  
 }
 
 .layoutFooter {
@@ -74,12 +74,12 @@ body {
   padding: 0;
   height: auto;
   line-height: 1.6;
-  background-color: #ffffff;
+ 
 }
 
 .layoutContent {
   grid-area: content;
-  background-color: #ffffff;
+  
 }
 
 .boss_img{
@@ -98,7 +98,7 @@ body {
 }
 
 .boss_img h1{
-  color: #000000;
+  color: #F18BA2;
   margin: 25px;
 }
 

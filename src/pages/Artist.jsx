@@ -7,8 +7,12 @@ import artists from "../json/artist.json"
 import Search from "../components/Search";
 import ArtistSelect from "../components/ArtistSelect";
 import { useParams } from 'react-router-dom';
+import { theme } from 'antd';
 
 function Artist(){
+    const {
+        token: { colorBg, colorTextBase },
+    } = theme.useToken();
     const { artcategoryName } = useParams();
     const _artists = !artcategoryName
     ? artists
@@ -18,7 +22,15 @@ function Artist(){
 
     return(
         <div className="mainLayout">
-            <Helmet><title>ARTIST</title></Helmet>
+            <Helmet>
+                <title>ARTIST</title>
+                <style>{`
+            body { 
+              background-color: ${colorBg}; 
+              color: ${colorTextBase}
+            }
+        `}</style>
+            </Helmet>
             <Header className="layoutHeader" />
             <div className="layoutContent" >
                 <ArtistTop/>
