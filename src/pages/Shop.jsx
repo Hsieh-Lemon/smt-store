@@ -32,7 +32,9 @@ function Shop() {
     return (
         <div className="mainLayout">
             <Header className="layoutHeader" />
-            <Helmet><style>{`
+            <Helmet>
+            <title>SHOP</title>
+                <style>{`
             body { 
                 background-color: ${colorBg}; 
                 color: ${colorTextBase}
