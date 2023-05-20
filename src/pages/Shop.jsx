@@ -2,15 +2,25 @@ import { Pagination } from 'antd';
 import { Helmet } from "react-helmet-async"
 import { useParams } from 'react-router-dom';
 import { theme } from 'antd';
-
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-
 import Search from '../components/Search';
 import NavBar2 from '../components/NavBar2'
 import Dropdown from '../components/DropDown';
 import ProductList from "../components/ProductList";
 import products from "../json/Products.json";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
+function ScrollToTopOnMount() {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+}
 
 function Shop() {
     const {
@@ -31,6 +41,7 @@ function Shop() {
         );
     return (
         <div className="mainLayout">
+            <ScrollToTopOnMount />
             <Header className="layoutHeader" />
             <Helmet>
             <title>SHOP</title>

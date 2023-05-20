@@ -8,6 +8,18 @@ import Search from "../components/Search";
 import ArtistSelect from "../components/ArtistSelect";
 import { useParams } from 'react-router-dom';
 import { theme } from 'antd';
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
+function ScrollToTopOnMount() {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+}
 
 function Artist() {
     const {
@@ -22,6 +34,7 @@ function Artist() {
 
     return (
         <div className="mainLayout">
+            <ScrollToTopOnMount />
             <Helmet>
                 <title>ARTIST</title>
                 <style>{`

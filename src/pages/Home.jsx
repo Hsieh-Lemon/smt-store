@@ -5,6 +5,19 @@ import { Helmet } from "react-helmet-async"
 import artists from "../json/album.json"
 import video from "../json/video.json"
 import { theme } from 'antd';
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
+function ScrollToTopOnMount() {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+}
+
 
 function Home() {
     const {
@@ -12,6 +25,7 @@ function Home() {
     } = theme.useToken();
     return (
         <div className="mainLayout">
+            <ScrollToTopOnMount />
             <Helmet>
                 <title>SMTOWN&SHOP</title>
                 <style>{`

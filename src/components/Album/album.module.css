@@ -116,7 +116,7 @@
     transition: 0.5s;
   }
   .activeSlide {
-    transform: scale(0.9);
+    transform: scale(0.8);
     composes:slide ;
   }
 
@@ -130,7 +130,8 @@
     transform: scale(1.1);
     composes:slide ;
   }
-
 }
+
+
 
 

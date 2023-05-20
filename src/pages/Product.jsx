@@ -1,11 +1,22 @@
 import { Helmet } from "react-helmet-async"
 import { useParams } from 'react-router-dom';
 import { theme } from 'antd';
-
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import ProductDetail from "../components/ProductDetail"
 import products from "../json/Products.json";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
+function ScrollToTopOnMount() {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+}
 
 
 function Product() {
@@ -18,7 +29,7 @@ function Product() {
      );
     return (
         <div className="mainLayout">
-            
+            <ScrollToTopOnMount />
             <Header className="layoutHeader" />
             <Helmet><style>{`
                body { 
