@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async"
 import { theme } from 'antd';
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import Scroll from "../components/Scroll"
 
 function ScrollToTopOnMount() {
     const { pathname } = useLocation();
@@ -30,10 +31,7 @@ function About() {
             </Helmet>
             <Header className="layoutHeader" />
             <div className="layoutContent" >
-                <div className="boss_img">
-                    <img src="images/sm_boss.jpg" />
-                    <h1>Pay To Unlock</h1>
-                </div>
+                <Scroll/>
             </div>
             <Footer className="layoutFooter" />
         </div>
