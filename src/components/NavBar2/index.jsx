@@ -42,6 +42,7 @@ export default function NavBar2() {
                     slidesToShow: 2,
                     slidesToScroll: 2,
                 }
+                
             }
         ],
     };

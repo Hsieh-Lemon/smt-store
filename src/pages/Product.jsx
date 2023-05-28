@@ -5,7 +5,18 @@ import Header from "../components/Header"
 import Footer from "../components/Footer"
 import ProductDetail from "../components/ProductDetail"
 import { useProductById } from '../react-query';
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
+function ScrollToTopOnMount() {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+}
 
 function Product() {
     const {
