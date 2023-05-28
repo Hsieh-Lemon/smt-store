@@ -4,29 +4,17 @@ import { theme } from 'antd';
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import ProductDetail from "../components/ProductDetail"
-import products from "../json/Products.json";
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
-
-function ScrollToTopOnMount() {
-    const { pathname } = useLocation();
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [pathname]);
-
-    return null;
-}
+import { useProductById } from '../react-query';
 
 
 function Product() {
     const {
         token: { colorBg},
     } = theme.useToken();
+    
     const { productId } = useParams();
-    const product = products.find(
-        (x) => x.id === productId
-     );
+    const { data, isLoading } = useProductById(productId);
+    const product = data || {};
     return (
         <div className="mainLayout">
             <ScrollToTopOnMount />

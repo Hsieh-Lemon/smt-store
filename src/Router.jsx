@@ -10,7 +10,9 @@ import { ConfigProvider } from 'antd'
 import { darkTheme, lightTheme } from './theme';
 import { selectLightMode } from "./redux/colorSlice";
 import { useSelector } from "react-redux";
-
+import Login from './pages/Login'
+import Register from './pages/Register'
+import Profile from './pages/Profile'
 
 function Router() {
     const lightMode = useSelector(selectLightMode);
@@ -33,7 +35,11 @@ function Router() {
                             <Route path="id/:productId" element={<Product />} />
 
                         </Route>
-                       
+                        <Route path="auth">
+                            <Route path="login" element={<Login />} />
+                            <Route path="register" element={<Register />} />
+                            <Route path="profile" element={<Profile />} />
+                        </Route>
 
 
                     </Routes>

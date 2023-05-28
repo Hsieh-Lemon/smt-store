@@ -1,7 +1,7 @@
 import React from "react";
 export function Icon({ size,color }) {
     return (
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"  x="0px" y="0px" width={size} height={size} viewBox="0 0 512 512" enable-background="new 0 0 512 512" xmlSpace="preserve">  <image id="image0" width="512" height="512" x="0" y="0"
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"  x="0px" y="0px" width={size} height={size} viewBox="0 0 512 512" enableBackground="new 0 0 512 512" xmlSpace="preserve">  <image id="image0" width="512" height="512" x="0" y="0"
         href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAQAAABecRxxAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
     AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZ
     cwAADsQAAA7EAZUrDhsAACLcSURBVHja7d15uFTVme/xL/N0UBQEFBQkAiKgxlnBqIlRYxxCNzEm
