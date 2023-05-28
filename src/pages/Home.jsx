@@ -6,7 +6,10 @@ import artists from "../json/album.json"
 import video from "../json/video.json"
 import { theme } from 'antd';
 
+
 function Home() {
+    
+    
     const {
         token: { colorBg},
     } = theme.useToken();

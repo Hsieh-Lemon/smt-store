@@ -31,3 +31,8 @@
     height: 1.9rem;
     padding-bottom: 0.5em;
 }
+.favorite {
+    cursor: pointer;
+    margin-top: 5px;
+   
+ }

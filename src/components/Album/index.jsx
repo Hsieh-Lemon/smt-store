@@ -91,7 +91,7 @@ export default function Album({ images }) {
       <div className={styles.layout}>
         <h1 className={styles.title} style={{color: colorTextBase,}}>ALBUM</h1>
         <div className={styles.slider}>
-          <Carousel {...settings} ref={ref}>
+          <Carousel {...settings} ref={ref} key={images.id}>
             {
               images.map((img, idx) => (
                 <div className={idx === imageIndex ? styles.activeSlide : styles.slide}>

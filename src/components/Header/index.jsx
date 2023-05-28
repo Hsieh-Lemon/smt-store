@@ -6,6 +6,8 @@ import HamburgerMenu from "../HamburgerMenu"
 import CartSummary from "../CartSummary";
 import { theme } from 'antd';
 import SetColorMode from "../SetColorMode"
+import Favorite from "../Favorite";
+import UserInfo from "../UserInfo";
 
 export default function Header() {
     const [isOnTouch, setIsOnTouch] = useState(false);
@@ -22,15 +24,17 @@ export default function Header() {
                     onClick={() => setIsOnTouch(!isOnTouch)}
                     isOnTouch={isOnTouch}
                 />
+                
                 <Link to="/">
                     <img className={styles.logo} src="/images/LOGO.svg" alt="logo" />
                 </Link>
+                
                 <NavBar open={isOnTouch} onClose={() => setIsOnTouch(false)} />
                 <div className={styles.IconArea}>
-                    <SetColorMode/>
-                    <a href="#">
-                        <img className={styles.icon} src="/images/LOGIN.svg" alt="login" />
-                    </a>
+                    <SetColorMode />
+                    <Favorite/>
+                    <UserInfo/>
+                    
                     <CartSummary style={{marginTop:'5px'}}/>
                 </div>
 

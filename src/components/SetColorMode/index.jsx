@@ -1,4 +1,4 @@
-import { theme } from "antd";
+import { theme,FloatButton } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 import { Sun, Moon } from "../Icons";
 import styles from "./setcolormode.module.css"
@@ -14,14 +14,15 @@ export default function SetColorMode() {
    }
 
    return (
-      <div onClick={toggleColor} className={styles.cartSummary} >
+      <div  onClick={toggleColor} className={styles.cartSummary} >
          {
             lightMode ? (
-               <Sun color={colorTextBase} />
+               <FloatButton icon={<Sun color={colorTextBase} />}/>
             ) : (
-               <Moon color={colorTextBase} />
+               <FloatButton icon={<Moon color={colorTextBase} />}/>
             )
          }
       </div>
    );
 }
+/products/id/3
