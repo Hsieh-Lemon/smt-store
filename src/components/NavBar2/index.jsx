@@ -33,6 +33,7 @@ export default function NavBar2() {
       };
     const settings = {
         focusOnSelect: true,
+        dots:false,
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,

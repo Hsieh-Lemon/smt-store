@@ -132,20 +132,22 @@ const ProfileCard = ({ redirect }) => {
 
 
                         <Input
-                            className={styles.inputbox} placeholder={userInfo.email}
+                            className={styles.inputbox} placeholder={userInfo.name}
                         />
                     </Form.Item>
-                    <h4 style={{ fontSize: "20px", fontWeight: "400" }}>Address</h4>
+                    </div>
+                    <div>
+                    <h4 style={{ fontSize: "20px", fontWeight: "400" }}>Email</h4>
                     <Form.Item
-                        name="adrs"
+                        name="email"
                         rules={[
                             {
                                 required: true,
-                                message: "Please input your Address",
+                                message: "Please input your Email",
                             },
                             {
                                 type: "string",
-                                message: "The input is not valid Address!",
+                                message: "The input is not valid Email!",
                             },
                         ]}
 
@@ -160,7 +162,7 @@ const ProfileCard = ({ redirect }) => {
                 <div>
                     <h4 style={{ fontSize: "20px", fontWeight: "400" }}>Address</h4>
                     <Form.Item
-                        name="address"
+                        name="adrs"
                         rules={[
                             {
                                 required: true,

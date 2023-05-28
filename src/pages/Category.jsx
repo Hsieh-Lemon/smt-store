@@ -9,8 +9,9 @@ import NavBar2 from '../components/NavBar2'
 import Dropdown from '../components/DropDown';
 import ProductList from "../components/ProductList";
 import { useState } from 'react';
-import {useProductsByCategory } from '../react-query';
-import { useQueries } from 'react-query';
+import { useProductsByCategory } from '../react-query';
+
+
 
 
 function Shop() {
@@ -19,9 +20,9 @@ function Shop() {
     } = theme.useToken();
     const { categoryName } = useParams();
     const { data, isLoading } = useProductsByCategory(categoryName);
-   
+
     const products = data || [];
-   
+
     const { currentPage, setCurrentPage } = useState(1);
     const [postsPerPage, setPostsPerPage] = useState(9);
     const [posts, setPosts] = useState([]);
@@ -30,10 +31,9 @@ function Shop() {
     const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
 
     return (
-        
+
         <div className="mainLayout">
             
-            <Header className="layoutHeader" />
             <Helmet>
                 <title>SHOP</title>
                 <style>{`
@@ -42,21 +42,23 @@ function Shop() {
                 color: ${colorTextBase}
                 }
             `}</style></Helmet>
-            <div className="layoutContent container">
+            <Header className="layoutHeader" />
+            <div className="layoutContent">
+                <div className="title">
+                    <title style={{ color: colorTextBase }}>SHOP</title>
 
-                <title>SHOP</title>
-                
-                <Search />
-                <NavBar2 />
-                <Dropdown />
+                    <Search />
+                    <NavBar2 />
+                    <Dropdown />
+                </div>
                 <ProductList products={products} posts={currentPosts} />
                 {/* onChange={(page,pageSize)=>{setCurrentPage(page)}} */}
-                
-                <Pagination defaultCurrent={1} postsPerPage={postsPerPage} total={50} />
-
+                <div className="title">
+                    <Pagination defaultCurrent={1} postsPerPage={postsPerPage} total={50} />
+                </div>
             </div>
             <Footer className="layoutFooter" />
-            
+
         </div>
 
 
