@@ -27,8 +27,8 @@
   }
   
   .navItem:hover {
-    color: white;
-    opacity: 1;
+    
+    opacity: 0.6;
     
   }
   

@@ -4,6 +4,7 @@ import Artist from './pages/Artist'
 import About from './pages/About'
 import Shop from './pages/Shop'
 import Product from './pages/Product';
+
 import { HelmetProvider } from 'react-helmet-async'
 import { ConfigProvider } from 'antd'
 import { darkTheme, lightTheme } from './theme';
@@ -30,8 +31,9 @@ function Router() {
                             <Route path="category/:categoryName" element={<Shop />} />
                             <Route path="author/:categoryName" element={<Shop />} />
                             <Route path="id/:productId" element={<Product />} />
-                           
+
                         </Route>
+                       
 
 
                     </Routes>

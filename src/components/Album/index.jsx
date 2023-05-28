@@ -13,44 +13,6 @@ export default function Album({ images }) {
     token: { colorTextBase },
   } = theme.useToken();
 
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      dots: false,
-      lazyLoad: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 5,
-      SlidesToScroll: 1,
-      centerMode: true,
-      centerPadding: 0,
-      beforeChange: (current, next) => setImageIndex(next),
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      dots: false,
-      lazyLoad: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 3,
-      SlidesToScroll: 1,
-      centerMode: true,
-      centerPadding: 0,
-      beforeChange: (current, next) => setImageIndex(next),
-    },
-    mobile: {
-      dots: false,
-      lazyLoad: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      SlidesToScroll: 1,
-      centerMode: true,
-      centerPadding: 0,
-      beforeChange: (current, next) => setImageIndex(next),
-    },
-  };
-
   const settings = {
     dots: false,
     lazyLoad: true,

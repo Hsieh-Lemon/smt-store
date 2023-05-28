@@ -10,7 +10,7 @@ const { Option } = Badge;
 
 function ProductDetail({ product }) {
     const {
-        token: { colorTextBase,colorTextBase2 },
+        token: { colorTextBase,colorTextBase2,colorTextBase3 },
       } = theme.useToken();
     const [qty, setQty] = useState(product.countInStock > 0 ? 1 : 0);
     const sum = product.price * qty;
@@ -33,20 +33,20 @@ function ProductDetail({ product }) {
     }
     return (
 
-        <div className={styles.info} style={{color: colorTextBase2,}}>
+        <div className={styles.info} style={{borderColor: colorTextBase3}}>
             <section key={product.name} >
                 <img
                     src={product.image}
                     alt={product.name} />
             </section>
             <section key={product.id} >
-                <h3 className={styles.author}>
+                <h3 className={styles.author} style={{color: colorTextBase2}}>
                     {product.author}
                 </h3>
-                <h2 className={styles.name} style={{color: colorTextBase,}}>
+                <h2 className={styles.name} style={{color: colorTextBase}}>
                     {product.name}
                 </h2>
-                <h3 className={styles.text}>
+                <h3 className={styles.text} style={{color: colorTextBase2}}>
                     $ {product.price}
                 </h3>
                 {/* <p className={styles.status}>
@@ -67,7 +67,7 @@ function ProductDetail({ product }) {
 
                     <Button onClick={increase} icon={<PlusOutlined />} />
                 </Space>
-                <div className={styles.sum}>
+                <div className={styles.sum} style={{color: colorTextBase2}}>
                     <p className={styles.word}>
                         TOTAL
                     </p>

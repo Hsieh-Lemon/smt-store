@@ -53,7 +53,7 @@ function Shop() {
             `}</style></Helmet>
             <div className="layoutContent container">
             
-                <title>SHOP</title>
+                <title style={{color: colorTextBase,}}>SHOP</title>
                 <Search />
                 <NavBar2 />
                 <Dropdown />

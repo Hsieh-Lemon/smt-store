@@ -51,7 +51,7 @@ function Artist() {
                     <Search />
                 </div>
                 <div className="search">
-                    <ArtistSelect />
+                    <ArtistSelect/>
                 </div>
                 <Gallery artist={_artists} />
             </div>

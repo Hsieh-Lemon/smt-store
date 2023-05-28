@@ -1,19 +1,24 @@
 import { NavLink } from 'react-router-dom';
 import { Drawer } from 'antd';
 import styles from './navbar.module.css';
+import { theme } from 'antd';
 
 export default function NavBar({ open, onClose }) {
+    const {
+        token: { colorTextBase },
+    } = theme.useToken();
+
     const NavBarContent = () => (
         <>
-            <NavLink to="/artist"
+            <NavLink to="/artist" style={{color: colorTextBase}}
                 className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
                 Artist
             </NavLink>
-            <NavLink to="/about"
+            <NavLink to="/about" style={{color: colorTextBase}}
                 className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
                 About
             </NavLink>
-            <NavLink to="/shop"
+            <NavLink to="/shop" style={{color: colorTextBase}}
                 className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
                 Shop
             </NavLink>

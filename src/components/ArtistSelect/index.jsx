@@ -28,7 +28,7 @@ const items = [
     {
         label: <NavLink to="/artist"
             className={({ isActive }) => (isActive ? styles.navItemActive : styles.navItem)}>
-            A to Z
+            ALL
         </NavLink>,
         key: '4',
     },
@@ -39,7 +39,7 @@ const menuProps = {
 };
 const ArtistSelect = () => (
     <Space wrap>
-        <Dropdown menu={menuProps} overlayStyle={{ height:"15rem",colorBgElevated:"#F2C3CE",overflow:"scroll" }} >
+        <Dropdown menu={menuProps} overlayStyle={{ colorBgElevated:"#F2C3CE" }} >
             <Button style={{
                 width: 260,
                 height: 40,

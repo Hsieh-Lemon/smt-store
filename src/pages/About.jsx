@@ -1,10 +1,12 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import History from "../components/History";
+import CompanyItro from "../components/CompanyItro";
 import { Helmet } from "react-helmet-async"
 import { theme } from 'antd';
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import Scroll from "../components/Scroll"
+
 
 function ScrollToTopOnMount() {
     const { pathname } = useLocation();
@@ -18,8 +20,9 @@ function ScrollToTopOnMount() {
 
 function About() {
     const {
-        token: { colorBg },
+        token: { colorBg, colorTextBase},
     } = theme.useToken();
+    
     return (
         <div className="mainLayout">
             <ScrollToTopOnMount />
@@ -31,7 +34,14 @@ function About() {
             </Helmet>
             <Header className="layoutHeader" />
             <div className="layoutContent" >
-                <Scroll/>
+                <div className="search">
+                    <title style={{color: colorTextBase}}>Company Introduction</title>
+                </div>
+                <CompanyItro/>
+                <div className="title">
+                    <title style={{color: colorTextBase}}>History</title>
+                </div>
+                <History/>
             </div>
             <Footer className="layoutFooter" />
         </div>

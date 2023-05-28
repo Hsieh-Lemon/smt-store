@@ -8,43 +8,43 @@
 }
 
 @media (min-width: 576px) {
-.container {
-  width: 540px;
+  .container {
+    width: 540px;
+  }
 }
-} 
 
 /*平板電腦*/
 @media (min-width: 768px) {
-.container {
-  width: 720px;
+  .container {
+    width: 720px;
+  }
 }
-} 
 
 /*電腦*/
 @media (min-width: 992px) {
-.container {
-  width: 960px;
+  .container {
+    width: 960px;
+  }
 }
-} 
 
 @media (min-width: 1200px) {
-.container {
-  width: 1140px;
+  .container {
+    width: 1140px;
+  }
 }
-} 
 
 
 @media (min-width: 1600px) {
-.container {
-  width: 1500px;
+  .container {
+    width: 1500px;
+  }
 }
-} 
 
 /* body */
 body {
   font-size: 16px;
   line-height: 1.6;
- 
+
   color: rgb(0, 0, 0);
 }
 
@@ -52,7 +52,7 @@ body {
 .mainLayout {
   display: grid;
   min-height: 100vh;
-  grid-template-areas: 
+  grid-template-areas:
     'header'
     'content'
     'footer'
@@ -66,7 +66,7 @@ body {
   padding: 0;
   height: auto;
   line-height: 1.6;
-  
+
 }
 
 .layoutFooter {
@@ -74,15 +74,15 @@ body {
   padding: 0;
   height: auto;
   line-height: 1.6;
- 
+
 }
 
 .layoutContent {
   grid-area: content;
-  
+
 }
 
-.boss_img{
+.boss_img {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,19 +90,19 @@ body {
   flex-direction: column;
 }
 
-.boss_img img{
+.boss_img img {
   width: 380px;
   height: 400px;
   object-fit: cover;
   object-position: left;
 }
 
-.boss_img h1{
+.boss_img h1 {
   color: #F18BA2;
   margin: 25px;
 }
 
-.search{
+.search {
   display: flex;
   justify-content: center;
 }
@@ -181,19 +181,44 @@ body {
   grid-area: content;
 }
 
-.mainLayout title{
-    display: flex;
-    
-   justify-content: center;
-    align-items: center;
-    border:solid 4px #F18BA2;
-    border-radius:22px ;
-    width: 225px;
-    height: 75px;
-    font-weight: 700;
+.mainLayout title {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 4px #F18BA2;
+  border-radius: 22px;
+  width: 225px;
+  height: 75px;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #434868;
+  margin-top: 4rem;
+  margin-bottom: 2.438rem;
+}
+
+.search title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 4px #F18BA2;
+  border-radius: 22px;
+  width: 200px;
+  height: 75px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: 4rem;
+  margin-bottom: 2.438rem;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .search title {
+    width: 410px;
     font-size: 2rem;
-    
-    margin-top: 4rem;
-    margin-bottom: 2.438rem;
-    
+  }
 }

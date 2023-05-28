@@ -1,20 +1,26 @@
-.gallery{
-    margin-bottom:130px ;
-     padding: 0 10px 0 10px;
- }
- 
- @media (min-width: 768px) {
-     .gallery {
-         padding: 0 130px 0 130px;
-     }
-   }
+.gallery {
+	margin-bottom: 130px;
+	padding: 0 10px 0 10px;
+}
+
+@media (min-width: 768px) {
+	.gallery {
+		padding: 0 80px 0 80px;
+	}
+}
+
+@media (min-width: 992px) {
+	.gallery {
+		padding: 0 130px 0 130px;
+	}
+}
 
 
 
 .grid {
 	position: relative;
 	margin: 0 auto;
-	
+
 	max-width: 1000px;
 	list-style: none;
 	text-align: center;
@@ -55,7 +61,7 @@
 }
 
 .grid figure figcaption,
-.grid figure figcaption > a {
+.grid figure figcaption>a {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -65,7 +71,7 @@
 
 /* Anchor will cover the whole item by default */
 /* For some effects it will show as a button */
-.grid figure figcaption > a {
+.grid figure figcaption>a {
 	z-index: 1000;
 	text-indent: 200%;
 	white-space: nowrap;
@@ -99,12 +105,12 @@ figure.effectSadie figcaption::before {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: -webkit-linear-gradient(top, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
-	background: linear-gradient(to bottom, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
+	background: -webkit-linear-gradient(top, rgba(72, 76, 97, 0) 0%, rgba(72, 76, 97, 0.8) 75%);
+	background: linear-gradient(to bottom, rgba(72, 76, 97, 0) 0%, rgba(72, 76, 97, 0.8) 75%);
 	content: '';
 	opacity: 0;
-	-webkit-transform: translate3d(0,50%,0);
-	transform: translate3d(0,50%,0);
+	-webkit-transform: translate3d(0, 50%, 0);
+	transform: translate3d(0, 50%, 0);
 }
 
 figure.effectSadie h2 {
@@ -115,8 +121,8 @@ figure.effectSadie h2 {
 	color: #ffffff;
 	-webkit-transition: -webkit-transform 0.35s, color 0.35s;
 	transition: transform 0.35s, color 0.35s;
-	-webkit-transform: translate3d(0,-50%,0);
-	transform: translate3d(0,-50%,0);
+	-webkit-transform: translate3d(0, -50%, 0);
+	transform: translate3d(0, -50%, 0);
 }
 
 figure.effectSadie figcaption::before,
@@ -132,19 +138,19 @@ figure.effectSadie p {
 	padding: 2em;
 	width: 100%;
 	opacity: 0;
-	-webkit-transform: translate3d(0,10px,0);
-	transform: translate3d(0,10px,0);
+	-webkit-transform: translate3d(0, 10px, 0);
+	transform: translate3d(0, 10px, 0);
 }
 
 figure.effectSadie:hover h2 {
 	color: #fff;
-	-webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
-	transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+	-webkit-transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
+	transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
 }
 
-figure.effectSadie:hover figcaption::before ,
+figure.effectSadie:hover figcaption::before,
 figure.effectSadie:hover p {
 	opacity: 1;
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
 }
