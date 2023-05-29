@@ -3,14 +3,28 @@ import { Helmet } from "react-helmet-async"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import ProfileCard from '../components/ProfileCard';
+import MotionPage from '../components/MotionPage';
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
+function ScrollToTopOnMount() {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+}
+
 
 function Profile() {
     const {
         token: { colorBg, colorTextBase },
     } = theme.useToken();
     return (
-        <div className="mainLayout">
-            <Header className="layoutHeader" />
+        <MotionPage className="mainLayout">
+            <ScrollToTopOnMount />
             <Helmet>
                 <title>Profile</title>
                 <style>{`
@@ -19,12 +33,13 @@ function Profile() {
                 color: ${colorTextBase}
                 }
             `}</style></Helmet>
+            <Header className="layoutHeader" />
             <div className="layoutContent container">
-                <title>PROFILE</title>
+                <title style={{color:colorTextBase}}>PROFILE</title>
                 <ProfileCard />
             </div>
             <Footer className="layoutFooter" />
-        </div>
+        </MotionPage>
     );
 }
 export default Profile;

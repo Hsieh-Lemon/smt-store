@@ -7,6 +7,7 @@ import video from "../json/video.json"
 import { theme } from 'antd';
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import MotionPage from '../components/MotionPage';
 
 function ScrollToTopOnMount() {
     const { pathname } = useLocation();
@@ -27,7 +28,7 @@ function Home() {
         token: { colorBg},
     } = theme.useToken();
     return (
-        <div className="mainLayout">
+        <MotionPage className="mainLayout">
             <ScrollToTopOnMount />
             <Helmet>
                 <title>SMTOWN&SHOP</title>
@@ -42,7 +43,7 @@ function Home() {
                 <ContentList  artists={artists} video={video} />
             </div>
             <Footer className="layoutFooter" />
-        </div>
+        </MotionPage>
 
     )
 }

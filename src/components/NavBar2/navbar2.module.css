@@ -6,22 +6,35 @@
   margin-top: 4.2rem;
   font-weight: 500;
   height: 10vh;
-}
-
-.content {
-  max-width: 800px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   
 }
-@media (max-width: 768px) {
-  .content{
-    max-width: 400px;
-    display: flex;
+.content{
+  max-width: 300px;
+  display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+.layoutNavBar{
+  display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: space-around;
+  margin-top: 3.5rem;
+  margin-bottom: 0;
+  padding: 0;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .content {
+    max-width: 700px;
   }
+}
+
+@media (min-width: 992px) {
+  /*.content {
+    max-width: 800px;
+  }*/
 }
 .navItem {
   font-size: 1.5rem;

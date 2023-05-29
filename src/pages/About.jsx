@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet-async"
 import { theme } from 'antd';
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import MotionPage from '../components/MotionPage';
 
 
 function ScrollToTopOnMount() {
@@ -24,7 +25,7 @@ function About() {
     } = theme.useToken();
     
     return (
-        <div className="mainLayout">
+        <MotionPage className="mainLayout">
             <ScrollToTopOnMount />
             <Helmet>
                 <title>ABOUT</title>
@@ -44,7 +45,7 @@ function About() {
                 <History/>
             </div>
             <Footer className="layoutFooter" />
-        </div>
+        </MotionPage>
 
     )
 }

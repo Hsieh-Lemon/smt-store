@@ -1,6 +1,6 @@
 import { getApps, getApp, initializeApp } from "firebase/app";
-import { getFirestore, collection, addDoc, setDoc, getDoc, updateDoc, getDocs, doc, deleteDoc, orderBy, query, where, initializeFirestore } from "firebase/firestore";
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, initializeAuth, signOut, updateProfile, } from 'firebase/auth';
+import { getFirestore, collection, setDoc, getDoc, updateDoc, getDocs, doc, deleteDoc,  query, where, initializeFirestore } from "firebase/firestore";
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, initializeAuth} from 'firebase/auth';
 import _ from "lodash";
 import products from "../json/Products.json";
 
@@ -76,7 +76,10 @@ export const getUserInfo = async () => {
     if (user) {
         const docRef = doc(db, "users", user.uid);
         const docSnap = await getDoc(docRef);
-        const userDoc = docSnap.data;
+        const userDoc = docSnap.data();
+        console.log(docRef, 'getUserInfo')
+        console.log(userDoc, 'getUserInfo')
+
         return {
             uid: user.uid,
             email: user.email,

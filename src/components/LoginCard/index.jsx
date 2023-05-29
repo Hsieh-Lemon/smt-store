@@ -1,9 +1,10 @@
 import { Form, Input, Button, Checkbox, ConfigProvider, Space, Divider } from 'antd';
 import { WarningOutlined } from "@ant-design/icons";
-import React, { useEffect, useState }from "react";
-import { Link ,useNavigate} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { useSignInWithEmailPassword } from '../../react-query';
 import styles from './logincard.module.css';
+import { theme } from 'antd';
 
 const LoginCard = ({ redirect }) => {
     const { mutate, error, isLoading, isError, isSuccess, data } = useSignInWithEmailPassword();
@@ -16,9 +17,12 @@ const LoginCard = ({ redirect }) => {
     };
     useEffect(() => {
         if (isSuccess) {
-           navigate(redirect);
+            navigate(redirect);
         }
-     }, [isSuccess, redirect]);
+    }, [isSuccess, redirect]);
+    const {
+        token: { inputContainer },
+    } = theme.useToken();
     return (
         <Form
             name="normal_login"
@@ -37,63 +41,69 @@ const LoginCard = ({ redirect }) => {
                 Input: {
                     colorBgContainer: "#FCE1E7",
                     colorBorder: "#FCE1E7",
+                    
                 }
 
             },
         }}
-        >       <h4 style={{ fontSize: "20px", fontWeight: "400" }}>Email</h4>
-                <Form.Item
-                    name="email"
-                    rules={[
-                        {
-                            type: "email",
-                            message: "The input is not valid E-mail!",
-                        },
-                        {
-                            required: true,
-                            message: "Please input your E-mail",
-                        },
-                    ]}
+        >
+                <div className={styles.inputArea}>
+                    <h4 style={{ fontSize: "20px", fontWeight: "400" }}>Email</h4>
+                    <Form.Item
+                        name="email"
+                        rules={[
+                            {
+                                type: "email",
+                                message: "The input is not valid E-mail!",
+                            },
+                            {
+                                required: true,
+                                message: "Please input your E-mail",
+                            },
+                        ]}
 
-                    hasFeedback
-                >
-                    
-                    <Input
-                        placeholder="Enter your E-Mail"
-                        className={styles.inputbox}
-                    />
-                </Form.Item>
-                <h4 style={{ fontSize: "20px", fontWeight: "400" }}>Password</h4>
-                <Form.Item
-                    name="password"
-                    rules={[
-                        {
-                            required: true,
-                            message: "Please input your Password",
-                        },
-                    ]}
-                    hasFeedback
-                >
-                    
-                    <Input.Password
-                        type="password"
-                        placeholder="Enter your Password"
-                        className={styles.inputbox}
-                    />
-                </Form.Item>
+                        hasFeedback
+                    >
+
+                        <Input
+                            placeholder="Enter your E-Mail"
+                            className={styles.inputbox}
+                        />
+                    </Form.Item>
+                </div>
+                <div className={styles.inputArea}>
+                    <h4 style={{ fontSize: "20px", fontWeight: "400" }}>Password</h4>
+                    <Form.Item
+                        name="password"
+                        rules={[
+                            {
+                                required: true,
+                                message: "Please input your Password",
+                            },
+                        ]}
+                        hasFeedback
+                    >
+
+                        <Input.Password
+                            type="password"
+                            placeholder="Enter your Password"
+                            className={styles.inputbox}
+                        />
+                    </Form.Item>
+                </div>
             </ConfigProvider >
 
             <Form.Item>
-                <Space size={292}>
-                    <Form.Item name="remember" valuePropName="checked" noStyle>
-                        <Checkbox onChange={() => setIsRemember(!isRemember)} checked={isRemember}>
-                            Remember me
-                        </Checkbox>
-                    </Form.Item>
-                    <Link className={styles.loginFormForgot} to={"/"}>
-                        Forgot password ?
-                    </Link>
-                </Space>
+                <div className={styles.checkarea}>
+                <Form.Item name="remember" valuePropName="checked" noStyle>
+                    <Checkbox onChange={() => setIsRemember(!isRemember)} checked={isRemember}>
+                        Remember me
+                    </Checkbox>
+                </Form.Item>
+                <Link className={styles.loginFormForgot} to={"/"}>
+                    Forgot password ?
+                </Link>
+                </div>
             </Form.Item>
 
             <Form.Item>
@@ -116,7 +126,11 @@ const LoginCard = ({ redirect }) => {
                     </div>
                 )}
             </Form.Item>
-            <Divider style={{ color: "#F18BA2" }}>countinue with</Divider>
+            <div className={styles.continue}>
+                <div className={styles.line}></div>
+                <p style={{ color: "#F18BA2",fontWeight:600}}>countinue with</p>
+                <div className={styles.line}></div>
+            </div>
             <Form.Item className={styles.loginFormOther}>
 
                 <Link to={"/"}>

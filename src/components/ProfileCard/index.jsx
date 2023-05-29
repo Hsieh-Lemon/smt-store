@@ -1,6 +1,6 @@
 import { Form, Input, Button, ConfigProvider, Space, Upload } from 'antd';
 import { useState, useEffect } from "react";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useUpdateProfile, useLogout, useUserInfo } from "../../react-query";
 import styles from './profilecard.module.css';
 
@@ -24,6 +24,7 @@ const beforeUpload = (file) => {
 const ProfileCard = ({ redirect }) => {
 
     const { data: userInfo } = useUserInfo() || {};
+    console.log(userInfo, 'userInfo in Profile Card')
     const update = useUpdateProfile();
     const logout = useLogout();
     const navigate = useNavigate();
@@ -108,106 +109,117 @@ const ProfileCard = ({ redirect }) => {
                         )}
                     </Upload>
                 </Form.Item>
-                <h4 style={{ fontSize: "20px", fontWeight: "400" }}>Name</h4>
-                <Form.Item
-                    name="name"
-                    rules={[
-                        {
-                            required: true,
-                            message: "Please input your name",
-                            whitespace: true,
-                        },
-                        {
-                            type: "string",
-                            message: "The input is not valid Name!",
-                        },
-                    ]}
+                <div>
+                    <h4 style={{ fontSize: "20px", fontWeight: "400" }}>Name</h4>
+                    <Form.Item
+                        name="name"
+                        rules={[
+                            {
+                                required: true,
+                                message: "Please input your name",
+                                whitespace: true,
+                            },
+                            {
+                                type: "string",
+                                message: "The input is not valid Name!",
+                            },
+                        ]}
 
-                >
-                    
-                    <Input
-                        className={styles.inputbox} placeholder={userInfo.name}
-                    />
-                </Form.Item>
-                <h4 style={{ fontSize: "20px", fontWeight: "400" }}>Email</h4>
-                <Form.Item
-                    name="email"
-                    rules={[
-                        {
-                            type: "email",
-                            message: "The input is not valid E-mail!",
-                        },
-                        {
-                            required: true,
-                            message: "Please input your E-mail",
-                        },
-                    ]}
-                    
+                    >
 
-                >
-                    
-                    <Input
-                        className={styles.inputbox} placeholder={userInfo.email}
-                    />
-                </Form.Item>
-                <h4 style={{ fontSize: "20px", fontWeight: "400" }}>Address</h4>
-                <Form.Item
-                    name="address"
-                    rules={[
-                        {
-                            required: true,
-                            message: "Please input your Address",
-                        },
-                        {
-                            type: "string",
-                            message: "The input is not valid Address!",
-                        },
-                    ]}
+                        <Input
+                            className={styles.inputbox} placeholder={userInfo.name}
+                        />
+                    </Form.Item>
+                </div>
+                <div>
+                    <h4 style={{ fontSize: "20px", fontWeight: "400" }}>Email</h4>
+                    <Form.Item
+                        name="email"
+                        rules={[
+                            {
+                                type: "email",
+                                message: "The input is not valid E-mail!",
+                            },
+                            {
+                                required: true,
+                                message: "Please input your E-mail",
+                            },
+                        ]}
 
-                >
-                    
-                    <Input
-                        className={styles.inputbox} placeholder={userInfo?.adrs || ""}
-                    />
-                </Form.Item>
-                <h4 style={{ fontSize: "20px", fontWeight: "400" }}>Phone</h4>
-                <Form.Item
-                    name="tel"
 
-                    rules={[
-                        {
-                            required: true,
-                            message: "Please input your Phone Number",
-                        },
-                        {
-                            type: "string",
-                            message: "The input is not valid Number!",
-                        },
-                    ]}
-                >
-                    
-                    <Input
-                        className={styles.inputbox} placeholder={userInfo?.tel || ""}
-                    />
-                </Form.Item>
+                    >
+
+                        <Input
+                            className={styles.inputbox} placeholder={userInfo.email}
+                        />
+                    </Form.Item>
+                </div>
+                <div>
+                    <h4 style={{ fontSize: "20px", fontWeight: "400" }}>Address</h4>
+                    <Form.Item
+                        name="address"
+                        rules={[
+                            {
+                                required: true,
+                                message: "Please input your Address",
+                            },
+                            {
+                                type: "string",
+                                message: "The input is not valid Address!",
+                            },
+                        ]}
+
+                    >
+
+                        <Input
+                            className={styles.inputbox} placeholder={userInfo?.adrs || ""}
+                        />
+                    </Form.Item>
+                </div>
+                <div>
+                    <h4 style={{ fontSize: "20px", fontWeight: "400" }}>Phone</h4>
+                    <Form.Item
+                        name="tel"
+
+                        rules={[
+                            {
+                                required: true,
+                                message: "Please input your Phone Number",
+                            },
+                            {
+                                type: "string",
+                                message: "The input is not valid Number!",
+                            },
+                        ]}
+                    >
+
+                        <Input
+                            className={styles.inputbox} placeholder={userInfo?.tel || ""}
+                        />
+                    </Form.Item>
+                </div>
             </ConfigProvider >
 
 
 
-            <Form.Item className={styles.btn}>
-                <Button
-                    type="primary"
-                    htmlType="submit"
-                    className={styles.submitButton}>
-                    SUBMIT
-                </Button>
-                <Button
-                    type="primary"
-                    onClick={onLogout}
-                    className={styles.logoutButton}>
-                    LOG OUT
-                </Button>
+            <Form.Item>
+                <div className={styles.btn}>
+                    <Button
+                        type="primary"
+                        htmlType="submit"
+                        className={styles.submitButton}>
+                        SUBMIT
+                    </Button>
+                    <Button
+                        type="primary"
+                        onClick={onLogout}
+                        className={styles.logoutButton}>
+                        LOG OUT
+                    </Button>
+                </div>
             </Form.Item>
+
 
         </Form>
     );

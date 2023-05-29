@@ -95,8 +95,8 @@ const DropDown = () => (
                 width: 260,
                 height: 40,
                 borderRadius: 13,
-                marginBottom: 62,
-                marginTop: 57
+                marginBottom: 56,
+                marginTop: 10
             }}>
                 <a onClick={(e) => e.preventDefault()}>
                 <Space style={{ fontSize: 20,width:200,justifyContent:"space-between" }}>

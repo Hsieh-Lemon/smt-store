@@ -10,32 +10,57 @@
 }
 .inputbox{
     height: 67px;
-    width:34rem;
+    width:22rem;
     border-radius: 20px;
     font-size: larger;
 }
 .btn{
     margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 22rem;
+    
 }
 .submitButton{
-    width:14.6rem;
+    width:10rem;
     height: 4.9rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 0.5rem 2rem;
     font-weight: 600;
     text-transform: uppercase;
     border-radius: 20px;
     background-color:#E5879C;
-    margin-right: 40px;
 }
 .logoutButton{
-    width:14.6rem;
+    width:10rem;
     height: 4.9rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 0.5rem 2rem;
     font-weight: 600;
     text-transform: uppercase;
     border-radius: 20px;
     background-color:#747BA8;
-    margin-left: 40px;
+
 }
+
+@media (min-width: 768px) {
+    .inputbox{
+        width:34rem;
+    }
+
+    .submitButton{
+        width:14.6rem;
+        height: 4.9rem;
+        font-size: 2rem;
+    }
+    .logoutButton{
+        width:14.6rem;
+        height: 4.9rem;
+        font-size: 2rem;
+    }
+    .btn{
+        width: 34rem;
+    }
+  
+  }

@@ -12,7 +12,20 @@ import products from "../json/Products.json";
 import { useState } from 'react';
 import { useProducts, useProductsByCategory } from '../react-query';
 import { useQueries } from 'react-query';
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import MotionPage from '../components/MotionPage';
 
+
+function ScrollToTopOnMount() {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+}
 
 function Shop() {
     const {
@@ -20,9 +33,10 @@ function Shop() {
     } = theme.useToken();
     const { categoryName } = useParams();
     const { data, isLoading } = useProducts(categoryName);
-   
+
+
     const products = data || [];
-   
+
     // const _products = !categoryName
     //     ? products
     //     : products.filter(
@@ -44,10 +58,11 @@ function Shop() {
     const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
 
     return (
-        
-        <div className="mainLayout">
-            
+
+        <MotionPage className="mainLayout">
+
             <Header className="layoutHeader" />
+            <ScrollToTopOnMount />
             <Helmet>
                 <title>SHOP</title>
                 <style>{`
@@ -56,22 +71,24 @@ function Shop() {
                 color: ${colorTextBase}
                 }
             `}</style></Helmet>
-            <div className="layoutContent container">
-
-                <title>SHOP</title>
-                
-                <Search />
-                <NavBar2 />
-                <Dropdown />
-                <ProductList products={products} posts={currentPosts} />
+            <div className="layoutContent">
+                <div className="title">
+                    <title style={{color: colorTextBase}}>SHOP</title>
+                    <Search />
+                    <NavBar2/>
+                    <Dropdown />
+                </div>
+                <ProductList products={products} posts={currentPosts} isLoading={isLoading} />
                 {/* onChange={(page,pageSize)=>{setCurrentPage(page)}} */}
-                
-                <Pagination defaultCurrent={1} postsPerPage={postsPerPage} total={50} />
+
+                <div className="title">
+                    <Pagination defaultCurrent={1} postsPerPage={postsPerPage} total={50} />
+                </div>
 
             </div>
             <Footer className="layoutFooter" />
-            
-        </div>
+
+        </MotionPage>
 
 
     );
