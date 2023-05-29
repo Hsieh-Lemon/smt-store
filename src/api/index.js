@@ -18,7 +18,7 @@ import {
   initializeAuth,
 } from 'firebase/auth';
 import _ from "lodash";
-import products from "../json/products.json";
+import products from "../json/Products.json";
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,

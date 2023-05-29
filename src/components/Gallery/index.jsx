@@ -10,7 +10,7 @@ export default function Gallery({ artist }) {
             >
                 <Masonry gutter="10px">
                     {artist.map(artist => (
-                        <div class={styles.grid}>
+                        <div className={styles.grid}>
                             <figure className={styles.effectSadie}>
                                 <img
                                     key={artist.id}
