@@ -40,15 +40,21 @@ export default function NavBar2() {
         prevArrow: <CustomPrevArrow />,
         nextArrow: <CustomNextArrow />,
         responsive: [
-            
             {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                }
-                
-            }
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          SlidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 464,
+        settings: {
+          slidesToShow: 1,
+          SlidesToScroll: 1,
+        }
+      }
+            
         ],
     };
     
