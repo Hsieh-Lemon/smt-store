@@ -9,7 +9,7 @@ import NavBar2 from '../components/NavBar2'
 import Dropdown from '../components/DropDown';
 import ProductList from "../components/ProductList";
 import { useState } from 'react';
-import { useProducts, useProductsByCategory } from '../react-query';
+import { useProducts } from '../react-query';
 import { useQueries } from 'react-query';
 
 
@@ -17,7 +17,7 @@ function Shop() {
     const {
         token: { colorBg, colorTextBase },
     } = theme.useToken();
-    const { categoryName } = useParams();
+    
     const { data, isLoading } = useProducts();
    
     const products = data || [];

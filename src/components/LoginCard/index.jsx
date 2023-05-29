@@ -60,7 +60,6 @@ const LoginCard = ({ redirect }) => {
 
                     hasFeedback
                 >
-
                     <Input
                         placeholder="Enter your E-Mail"
                         className={styles.inputbox}
@@ -77,7 +76,6 @@ const LoginCard = ({ redirect }) => {
                     ]}
                     hasFeedback
                 >
-
                     <Input.Password
                         type="password"
                         placeholder="Enter your Password"
