@@ -8,43 +8,47 @@ import Search from '../components/Search';
 import NavBar2 from '../components/NavBar2'
 import Dropdown from '../components/DropDown';
 import ProductList from "../components/ProductList";
-import products from "../json/Products.json";
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useState } from 'react';
+import { useProducts, useProductsByCategory } from '../react-query';
+import { useQueries } from 'react-query';
 
-function ScrollToTopOnMount() {
-    const { pathname } = useLocation();
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [pathname]);
-
-    return null;
-}
 
 function Shop() {
     const {
-        token: { colorBg,colorTextBase},
+        token: { colorBg, colorTextBase },
     } = theme.useToken();
     const { categoryName } = useParams();
-    const _products = !categoryName
-        ? products
-        : products.filter(
-            x => x?.category.toUpperCase() === categoryName.toUpperCase(),
+    const { data, isLoading } = useProducts();
+   
+    const products = data || [];
+   
+    // const _products = !categoryName
+    //     ? products
+    //     : products.filter(
+    //         x => x?.category.toUpperCase() === categoryName.toUpperCase(),
 
-        );
-    const _pd = !categoryName
-        ? products
-        : products.filter(
-            x => x?.sku.toUpperCase() === categoryName.toUpperCase(),
+    //     )
 
-        );
+    // const _pd = !categoryName
+    //     ? products
+    //     : products.filter(
+    //         x => x?.sku.toUpperCase() === categoryName.toUpperCase(),
+    //     );
+
+    const { currentPage, setCurrentPage } = useState(1);
+    const [postsPerPage, setPostsPerPage] = useState(9);
+    const [posts, setPosts] = useState([]);
+    const indexOfLastPost = currentPage * postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
     return (
+        
         <div className="mainLayout">
-            <ScrollToTopOnMount />
+            
             <Header className="layoutHeader" />
             <Helmet>
-            <title>SHOP</title>
+                <title>SHOP</title>
                 <style>{`
             body { 
                 background-color: ${colorBg}; 
@@ -52,16 +56,20 @@ function Shop() {
                 }
             `}</style></Helmet>
             <div className="layoutContent container">
-            
-                <title style={{color: colorTextBase,}}>SHOP</title>
+
+                <title>SHOP</title>
+                
                 <Search />
                 <NavBar2 />
                 <Dropdown />
-                <ProductList products={_products} pd={_pd} />
-                <Pagination defaultCurrent={1} total={50} />
+                <ProductList products={products} posts={currentPosts} />
+                {/* onChange={(page,pageSize)=>{setCurrentPage(page)}} */}
+                
+                <Pagination defaultCurrent={1} postsPerPage={postsPerPage} total={50} />
 
             </div>
             <Footer className="layoutFooter" />
+            
         </div>
 
 

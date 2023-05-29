@@ -4,13 +4,17 @@ import Artist from './pages/Artist'
 import About from './pages/About'
 import Shop from './pages/Shop'
 import Product from './pages/Product';
+import Category from './pages/Category'
+import Author from './pages/Author'
 
 import { HelmetProvider } from 'react-helmet-async'
 import { ConfigProvider } from 'antd'
 import { darkTheme, lightTheme } from './theme';
 import { selectLightMode } from "./redux/colorSlice";
 import { useSelector } from "react-redux";
-
+import Login from './pages/Login'
+import Register from './pages/Register'
+import Profile from './pages/Profile'
 
 function Router() {
     const lightMode = useSelector(selectLightMode);
@@ -28,12 +32,16 @@ function Router() {
                         <Route path="about" element={<About />} />
                         <Route path="shop" element={<Shop />} />
                         <Route path="products">
-                            <Route path="category/:categoryName" element={<Shop />} />
-                            <Route path="author/:categoryName" element={<Shop />} />
+                            <Route path="category/:categoryName" element={<Category />} />
+                            <Route path="author/:sku" element={<Author />} />
                             <Route path="id/:productId" element={<Product />} />
 
                         </Route>
-                       
+                        <Route path="auth">
+                            <Route path="login" element={<Login />} />
+                            <Route path="register" element={<Register />} />
+                            <Route path="profile" element={<Profile />} />
+                        </Route>
 
 
                     </Routes>

@@ -23,12 +23,13 @@ export default function Video({ video }) {
 
         <div className={styles.layout}>
             <h1 className={styles.title}
-                style={{color: colorTextBase,}}
+                style={{ color: colorTextBase, }}
             >
                 VIDEO
             </h1>
             <Row className={styles.contentArea} >
                 <Col className={styles.slider} type="flex" justify="center" align="middle"
+                    key={video.id}
                     sm={{ span: 24 }}
                     lg={{ span: 16 }}
                     xl={{ span: 16 }}
@@ -45,6 +46,7 @@ export default function Video({ video }) {
                     </Carousel>
                 </Col>
                 <Col className={styles.slider2} type="flex" align="middle"
+                    key={video.id}
                     sm={{ span: 16 }}
                     lg={{ span: 6 }}
                     xl={{ span: 6 }}
@@ -54,14 +56,15 @@ export default function Video({ video }) {
                         {
                             video.map((video) => (
                                 <div className={styles.slide2}>
-                                    <h1 style={{color:colorTextBase,}}>{video.name}</h1>
-                                    <h2 style={{color:colorTextBase,}}>{video.description}</h2>
+                                    <h1 style={{ color: colorTextBase, }}>{video.name}</h1>
+                                    <h2 style={{ color: colorTextBase, }}>{video.description}</h2>
                                 </div>
                             ))
                         }
                     </Carousel>
                 </Col>
                 <Col type="flex" align="middle"
+                    key={video.id}
                     sm={{ span: 8 }}
                     lg={{ span: 2 }}
                     xl={{ span: 2 }}
