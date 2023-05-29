@@ -10,6 +10,7 @@ const darkTheme = {
     colorTextBase2: "#ffffff",
     colorTextBase3: "#FCE1E7",
     colorBgHeader: "#F18BA2",
+    inputContainer:"#747BA8"
   },
   components: {
     Button: {
@@ -38,6 +39,7 @@ const lightTheme = {
     colorTextBase2: "#000000",
     colorTextBase3: "#747BA8",
     colorBgHeader: "#FCE1E7",
+    inputContainer:"#FCE1E7"
     // colorBorder: "#F18BA2",
     //         lineWidth: "4",
     //         colorText: "#F18BA2",

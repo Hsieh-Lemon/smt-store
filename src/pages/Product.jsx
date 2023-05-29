@@ -7,6 +7,7 @@ import ProductDetail from "../components/ProductDetail"
 import { useProductById } from '../react-query';
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import MotionPage from '../components/MotionPage';
 
 function ScrollToTopOnMount() {
     const { pathname } = useLocation();
@@ -27,7 +28,7 @@ function Product() {
     const { data, isLoading } = useProductById(productId);
     const product = data || {};
     return (
-        <div className="mainLayout">
+        <MotionPage className="mainLayout">
             <ScrollToTopOnMount />
             <Header className="layoutHeader" />
             <Helmet><style>{`
@@ -36,11 +37,11 @@ function Product() {
                }
             `}</style></Helmet>
             <div className="layoutContent container">
-                <ProductDetail product={product} />
+                <ProductDetail product={product} isLoading={isLoading}/>
 
             </div>
             <Footer className="layoutFooter" />
-        </div>
+        </MotionPage>
 
 
     );

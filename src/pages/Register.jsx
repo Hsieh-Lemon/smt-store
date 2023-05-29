@@ -4,6 +4,19 @@ import { useSearchParams } from 'react-router-dom';
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import RegisterCard from '../components/RegisterCard';
+import MotionPage from '../components/MotionPage';
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
+function ScrollToTopOnMount() {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+}
 
 function Register() {
     const {
@@ -13,8 +26,8 @@ function Register() {
     const [searchParams] = useSearchParams();
     const redirect = searchParams.get('redirect');
     return (
-        <div className="mainLayout">
-            <Header className="layoutHeader" />
+        <MotionPage className="mainLayout">
+            <ScrollToTopOnMount />
             <Helmet>
                 <title>Register</title>
                 <style>{`
@@ -23,12 +36,13 @@ function Register() {
                 color: ${colorTextBase}
                 }
             `}</style></Helmet>
+            <Header className="layoutHeader" />
             <div className="layoutContent container">
-                <title>REGISTER</title>
+                <title style={{color:colorTextBase}}>REGISTER</title>
                 <RegisterCard redirect={redirect}/>
             </div>
             <Footer className="layoutFooter" />
-        </div>
+        </MotionPage>
     );
 }
 export default Register;

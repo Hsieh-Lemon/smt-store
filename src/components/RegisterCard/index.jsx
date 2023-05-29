@@ -162,7 +162,11 @@ const RegisterCard = ({ redirect }) => {
                     </div>
                 )}
             </Form.Item>
-            <Divider style={{ color: "#F18BA2" }}>sign up with</Divider>
+            <div className={styles.continue}>
+                <div className={styles.line}></div>
+                <p style={{ color: "#F18BA2",fontWeight:600}}>countinue with</p>
+                <div className={styles.line}></div>
+            </div>
             <Form.Item className={styles.loginFormOther}>
 
                 <Link to={"/"}>

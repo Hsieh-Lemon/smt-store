@@ -10,10 +10,11 @@
 }
 .inputbox{
     height: 67px;
-    width:34rem;
+    width:22rem;
     border-radius: 20px;
     font-size: larger;
 }
+
 .registerButton{
     width:14rem;
     height: 4.9rem;
@@ -25,6 +26,21 @@
     background-color:#747BA8;
     
 }
+
+.continue{
+    margin: 20px 0 20px 0;
+    display: flex;
+    width: 22rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.line{
+    width: 30%;
+    height: 1px;
+    background-color: #F18BA2;
+}
+
 
 .loginFormOther{
     display: flex;
@@ -54,4 +70,17 @@
     padding-top: 0;
     margin-top: 0;
     font-size: 0.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .inputbox{
+        width:34rem;
+        
+    }
+
+    .continue{
+        width: 34rem;
+        
+    }
+  
   }

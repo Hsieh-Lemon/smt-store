@@ -10,6 +10,7 @@ import { useParams } from 'react-router-dom';
 import { theme } from 'antd';
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import MotionPage from '../components/MotionPage';
 
 function ScrollToTopOnMount() {
     const { pathname } = useLocation();
@@ -33,7 +34,7 @@ function Artist() {
         );
 
     return (
-        <div className="mainLayout">
+        <MotionPage className="mainLayout">
             <ScrollToTopOnMount />
             <Helmet>
                 <title>ARTIST</title>
@@ -56,7 +57,7 @@ function Artist() {
                 <Gallery artist={_artists} />
             </div>
             <Footer className="layoutFooter" />
-        </div>
+        </MotionPage>
 
     )
 }
