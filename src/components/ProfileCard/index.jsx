@@ -75,11 +75,13 @@ const ProfileCard = ({ redirect }) => {
             token: {
                 colorBgContainer: "#FCE1E7",
                 colorPrimary: "#F18BA2",
+
             },
             components: {
                 Input: {
                     colorBgContainer: "#FCE1E7",
                     colorBorder: "#FCE1E7",
+                    colorText: "#696D8A"
                 }
 
             },
@@ -127,23 +129,23 @@ const ProfileCard = ({ redirect }) => {
 
                     >
 
+
+
                         <Input
-                            className={styles.inputbox} placeholder={userInfo.name}
+                            className={styles.inputbox} placeholder={userInfo.email}
                         />
                     </Form.Item>
-                </div>
-                <div>
-                    <h4 style={{ fontSize: "20px", fontWeight: "400" }}>Email</h4>
+                    <h4 style={{ fontSize: "20px", fontWeight: "400" }}>Address</h4>
                     <Form.Item
-                        name="email"
+                        name="adrs"
                         rules={[
                             {
-                                type: "email",
-                                message: "The input is not valid E-mail!",
+                                required: true,
+                                message: "Please input your Address",
                             },
                             {
-                                required: true,
-                                message: "Please input your E-mail",
+                                type: "string",
+                                message: "The input is not valid Address!",
                             },
                         ]}
 

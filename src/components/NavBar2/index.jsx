@@ -13,48 +13,45 @@ import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 export default function NavBar2() {
   const { lg } = useBreakpoint();
   const [selected, setSelected] = useState(0);
+    
+    const CustomPrevArrow = (props) => {
+        const { className, style, onClick } = props;
+        return (
+          <div className={styles.left} style={{ ...style }} onClick={onClick}>
+            <FaAngleLeft />
+          </div>
+        );
+      };
+    
+      const CustomNextArrow = (props) => {
+        const { className, style, onClick } = props;
+        return (
+          <div className={styles.right} style={{ ...style }} onClick={onClick}>
+            <FaAngleRight/>
+          </div>
+        );
+      };
+    const settings = {
+        focusOnSelect: true,
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        prevArrow: <CustomPrevArrow />,
+        nextArrow: <CustomNextArrow />,
+        responsive: [
+            
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+                
+            }
+        ],
+    };
+    
 
-  const CustomPrevArrow = (props) => {
-    const { className, style, onClick } = props;
-    return (
-      <div className={styles.left} style={{ ...style }} onClick={onClick}>
-        <FaAngleLeft />
-      </div>
-    );
-  };
-
-  const CustomNextArrow = (props) => {
-    const { className, style, onClick } = props;
-    return (
-      <div className={styles.right} style={{ ...style }} onClick={onClick}>
-        <FaAngleRight />
-      </div>
-    );
-  };
-  const settings = {
-    focusOnSelect: true,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    prevArrow: <CustomPrevArrow />,
-    nextArrow: <CustomNextArrow />,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3,
-          SlidesToScroll: 1,
-        }
-      },
-      {
-        breakpoint: 464,
-        settings: {
-          slidesToShow: 1,
-          SlidesToScroll: 1,
-        }
-      }
-    ],
-  };
   const NavBarContent = (props) => (
     <motion.ul {...props} style={{ listStyleType: 'none' }}>
       <MotionNavLink

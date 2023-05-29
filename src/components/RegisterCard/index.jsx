@@ -36,6 +36,8 @@ const RegisterCard = ({ redirect }) => {
                 Input: {
                     colorBgContainer: "#FCE1E7",
                     colorBorder: "#FCE1E7",
+                    colorText:"#696D8A",
+                
                 }
 
             },
@@ -184,7 +186,7 @@ const RegisterCard = ({ redirect }) => {
             </Form.Item>
             <p style={{ fontSize: "20px", color: "#747BA8" }}>Already have an account ?</p>
             <Form.Item>
-                <Link style={{ fontSize: "24px", color: "#434868", fontWeight: "bold" }} to={`/auth/login?redirect=/auth/profile`}>Login</Link>
+                <Link style={{ fontSize: "24px", color: "#434868", fontWeight: "bold" }} to={`/auth/login?redirect=${redirect}`}>Login</Link>
             </Form.Item>
         </Form>
     );

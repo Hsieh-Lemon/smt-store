@@ -24,7 +24,7 @@ const darkTheme = {
         colorBgContainer:" #696D8A",
         colorBorder:"#696D8A",
         colorTextQuaternary:"#FFFFF",
-       
+        
     },
     Badge:{fontSize:"16"}
   },

@@ -6,7 +6,9 @@ import { theme } from "antd";
 
 export default function UserInfo(props) {
     const {
-        token: { colorTextBase },
+        token: { 
+            colorTextBase
+        },
 
     } = theme.useToken();
 
@@ -23,7 +25,7 @@ export default function UserInfo(props) {
         <div onClick={goToProfile}  style={{ ...props.style }} className={styles.userInfo}>
             <UserIcon color={colorTextBase} />
             
-            <p>
+            <p style={{color:colorTextBase}}>
             {!!userInfo?.name
                ? `${userInfo.name}'s`
                : `login`

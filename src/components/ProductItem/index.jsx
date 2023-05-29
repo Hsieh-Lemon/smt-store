@@ -2,7 +2,7 @@ import styles from './productitem.module.css';
 import _ from 'lodash';
 import Link from '../Link';
 import { Button, theme } from "antd"
-import { Icon } from "./icon";
+import { useNavigate } from "react-router-dom";
 import { FavIcon } from '../Icons';
 import { useToggleFavoriteProduct, useUserInfo } from '../../react-query';
 
@@ -11,12 +11,17 @@ export default function ProductItem({ product }) {
         token: { colorTextBase, colorTextBase2 },
     } = theme.useToken();
     const { mutate } = useToggleFavoriteProduct();
+    const navigate = useNavigate();
     const { data: userInfo } = useUserInfo() || {};
     const favorites = userInfo.favorites || [];
     let isFavorite = _.includes(favorites, product.id);
     const toggleFavorite = () => {
-        if (!!userInfo?.uid)
+        if (!!userInfo?.uid) {
             mutate({ productId: product.id, uid: userInfo?.uid })
+            navigate("/shop");
+        }
+        else
+            navigate("/auth/login?redirect=/shop");
     }
 
     return (
@@ -41,7 +46,7 @@ export default function ProductItem({ product }) {
                     <span className={styles.text} style={{ color: colorTextBase2, }}>
                         $ {product.price}
                         <div onClick={toggleFavorite} className={styles.favorite}>
-                            <FavIcon color={isFavorite ? '#FD2A5A' : '#000000'} />
+                            <FavIcon color={isFavorite ? '#FD2A5A' : colorTextBase} />
                         </div>
                         {/* <Button type="link" className={styles.btn} >
                             <Link to={`/products/id/${product.id}`}><Icon size={30} color={colorTextBase2} /></Link>

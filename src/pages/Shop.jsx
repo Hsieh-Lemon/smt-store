@@ -8,9 +8,8 @@ import Search from '../components/Search';
 import NavBar2 from '../components/NavBar2'
 import Dropdown from '../components/DropDown';
 import ProductList from "../components/ProductList";
-import products from "../json/Products.json";
 import { useState } from 'react';
-import { useProducts, useProductsByCategory } from '../react-query';
+import { useProducts } from '../react-query';
 import { useQueries } from 'react-query';
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
@@ -31,10 +30,9 @@ function Shop() {
     const {
         token: { colorBg, colorTextBase },
     } = theme.useToken();
-    const { categoryName } = useParams();
-    const { data, isLoading } = useProducts(categoryName);
-
-
+    
+    const { data, isLoading } = useProducts();
+   
     const products = data || [];
 
     // const _products = !categoryName

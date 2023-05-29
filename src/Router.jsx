@@ -4,6 +4,8 @@ import Artist from './pages/Artist'
 import About from './pages/About'
 import Shop from './pages/Shop'
 import Product from './pages/Product';
+import Category from './pages/Category'
+import Author from './pages/Author'
 
 import { HelmetProvider } from 'react-helmet-async'
 import { ConfigProvider } from 'antd'
@@ -30,8 +32,8 @@ function Router() {
                         <Route path="about" element={<About />} />
                         <Route path="shop" element={<Shop />} />
                         <Route path="products">
-                            <Route path="category/:categoryName" element={<Shop />} />
-                            <Route path="author/:categoryName" element={<Shop />} />
+                            <Route path="category/:categoryName" element={<Category />} />
+                            <Route path="author/:sku" element={<Author />} />
                             <Route path="id/:productId" element={<Product />} />
 
                         </Route>
